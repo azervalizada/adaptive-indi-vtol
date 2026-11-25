@@ -63,19 +63,24 @@ Incremental nonlinear dynamic inversion \sep Adaptive control \sep $\mathcal{L}_
 Incremental nonlinear dynamic inversion computes the actuator command as an increment on the current, measured
 state: the unknown part of the dynamics is contained in the measured angular acceleration, and only the control
 effectiveness $G$ must be known \cite{sieberling2010,smeur2016}. This makes INDI robust to aerodynamic and inertial model
-errors and has made it popular for multirotors and hybrid aircraft \cite{smeur2016,sun2020,deponti2023}. A rotor fault,
+errors and has made it popular for multirotors and hybrid aircraft \cite{smeur2016,sun2020,smeur2020,deponti2023,deponti2025}. A rotor fault,
 for example a damaged propeller, is different: it changes $G$ itself. The controller then still converges, because
 every residual error is measured again at the next step, but it does so more slowly, and the attitude transient grows.
+Robust incremental designs strengthen this passive tolerance, for example sliding-mode control driven by disturbance observers
+\cite{wang2019smdo} or nonsingular terminal sliding modes \cite{wang2019ntsmc}; a complete rotor failure on a quadrotor needs
+fault detection and a change of control strategy \cite{lu2015,mueller2014}.
 
 Three families of methods restore performance by adapting the controller online. Estimation of the
-effectiveness from INDI's own increments, with a least-mean-squares update, was proposed by Smeur et al.~\cite{smeur2016}. Predictor-based MRAC estimates the same
-quantities with a Lyapunov-derived law and has been used for adaptive control allocation \cite{falconi2021,franceschini2026}; Franceschini et al.~\cite{franceschini2026}
+effectiveness from INDI's own increments, with a least-mean-squares update, was proposed by Smeur et al.~\cite{smeur2016}; Atmaca and van Kampen~\cite{atmaca2025} estimate changes of the
+effectiveness online in two steps for fault-tolerant control of the Flying-V. Predictor-based MRAC estimates the same
+quantities with a Lyapunov-derived law \cite{lavretsky2013}, has been combined with INDI as a gain-adaptive law against
+effectiveness errors from damage and actuator faults \cite{chang2022}, and has been used for adaptive control allocation \cite{falconi2021,franceschini2026}; Franceschini et al.~\cite{franceschini2026}
 compare it with concurrent-learning and two-layer RLS estimators for the allocation of INDI on an over-actuated aircraft.
 $\mathcal{L}_1$ adaptive augmentation estimates a lumped uncertainty and cancels a low-pass-filtered copy of it
 \cite{hovakimyan2010,raos2026,mao2023}. Each has been shown on its own vehicle, tuned by its authors. For quadplanes,
 Wang and Sun~\cite{wang2021} handle the complete loss of a rotor with incremental adaptive sliding-mode control, Cai and Lovera~\cite{cai2025} reallocate
-rotors and surfaces during the transition with fault information assumed known, and Fu et al.~\cite{fu2025} design an adaptive
-fault-tolerant attitude controller for the transition. We found no study that compares RLS, MRAC and $\mathcal{L}_1$ on INDI
+rotors and surfaces during the transition with fault information assumed known, and Fu et al.~\cite{fu2025} and Wang et al.~\cite{wangban2023} combine adaptive sliding-mode control with allocation
+over rotors and surfaces in the transition, the latter without fault information. We found no study that compares RLS, MRAC and $\mathcal{L}_1$ on INDI
 under one protocol, none that follows them from a quadrotor to an over-actuated quadplane, and none that reports the minimum
 airspeed at which a quadplane survives a lift-rotor fault.
 
@@ -172,7 +177,7 @@ actuator limits,
 &\text{s.t.}\quad \vect u_{\min} - \vect u_0 \le \Delta\vect u \le \vect u_{\max} - \vect u_0,
 \end{aligned}
 \end{equation}
-solved by the active-set method of H\"{a}rkeg\aa{}rd~\cite{harkegard2002}, with $\gamma = 1000$ and
+solved by the active-set method of H\"{a}rkeg\aa{}rd~\cite{harkegard2002} (see \cite{johansen2013} for a survey of allocation methods), with $\gamma = 1000$ and
 $W_v = \mathrm{diag}(1,1,0.3,0.3)$. Actuators are
 normalised by their range and weighted equally; the preferred state (equal rotors, surfaces at zero) is approached with a 0.2\,s
 time constant. No scheduling rule is needed: as $\bar q$ grows, the surfaces become the cheaper way to produce a moment and
@@ -549,7 +554,16 @@ full responsibility for the content of the published article.
 \bibitem{sieberling2010} S.~Sieberling, Q.~P.~Chu, J.~A.~Mulder, ``Robust flight control using incremental nonlinear dynamic inversion and angular acceleration prediction,'' \emph{Journal of Guidance, Control, and Dynamics}, vol.~33, no.~6, pp.~1732--1742, 2010, doi:10.2514/1.49978.
 \bibitem{smeur2016} E.~J.~J.~Smeur, Q.~P.~Chu, G.~C.~H.~E.~de Croon, ``Adaptive incremental nonlinear dynamic inversion for attitude control of micro air vehicles,'' \emph{Journal of Guidance, Control, and Dynamics}, vol.~39, no.~3, pp.~450--461, 2016, doi:10.2514/1.G001490.
 \bibitem{sun2020} S.~Sun, X.~Wang, Q.~P.~Chu, C.~C.~de Visser, ``Incremental nonlinear fault-tolerant control of a quadrotor with complete loss of two opposing rotors,'' \emph{IEEE Transactions on Robotics}, vol.~37, no.~1, pp.~116--130, 2021, doi:10.1109/TRO.2020.3010626.
+\bibitem{smeur2020} E.~J.~J.~Smeur, M.~Bronz, G.~C.~H.~E.~de Croon, ``Incremental control and guidance of hybrid aircraft applied to a tailsitter unmanned air vehicle,'' \emph{Journal of Guidance, Control, and Dynamics}, vol.~43, no.~2, pp.~274--287, 2020, doi:10.2514/1.G004520.
 \bibitem{deponti2023} T.~M.~L.~De Ponti, E.~J.~J.~Smeur, B.~W.~D.~Remes, ``Incremental nonlinear dynamic inversion controller for a variable skew quad plane,'' in \emph{International Conference on Unmanned Aircraft Systems (ICUAS)}, pp.~241--248, 2023, doi:10.1109/ICUAS57906.2023.10156289.
+\bibitem{deponti2025} T.~M.~L.~De Ponti, E.~J.~J.~Smeur, B.~D.~W.~Remes, ``Unified-actuator nonlinear dynamic inversion controller for the variable skew quad plane,'' \emph{Journal of Guidance, Control, and Dynamics}, vol.~48, no.~5, pp.~1167--1176, 2025, doi:10.2514/1.G008659.
+\bibitem{wang2019smdo} X.~Wang, S.~Sun, E.-J.~van Kampen, Q.~P.~Chu, ``Quadrotor fault tolerant incremental sliding mode control driven by sliding mode disturbance observers,'' \emph{Aerospace Science and Technology}, vol.~87, pp.~417--430, 2019, doi:10.1016/j.ast.2019.03.001.
+\bibitem{wang2019ntsmc} X.~Wang, E.-J.~van Kampen, Q.~P.~Chu, ``Quadrotor fault-tolerant incremental nonsingular terminal sliding mode control,'' \emph{Aerospace Science and Technology}, vol.~95, 105514, 2019, doi:10.1016/j.ast.2019.105514.
+\bibitem{lu2015} P.~Lu, E.-J.~van Kampen, ``Active fault-tolerant control for quadrotors subjected to a complete rotor failure,'' in \emph{IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, pp.~4698--4703, 2015.
+\bibitem{mueller2014} M.~W.~Mueller, R.~D'Andrea, ``Stability and control of a quadrocopter despite the complete loss of one, two, or three propellers,'' in \emph{IEEE International Conference on Robotics and Automation (ICRA)}, pp.~45--52, 2014, doi:10.1109/ICRA.2014.6906588.
+\bibitem{atmaca2025} D.~Atmaca, E.-J.~van Kampen, ``Fault tolerant control for the Flying-V using adaptive incremental nonlinear dynamic inversion,'' in \emph{AIAA SciTech Forum}, AIAA 2025-0081, 2025, doi:10.2514/6.2025-0081.
+\bibitem{lavretsky2013} E.~Lavretsky, K.~A.~Wise, \emph{Robust and Adaptive Control with Aerospace Applications}, Springer, London, 2013.
+\bibitem{chang2022} J.~Chang, Z.~Guo, R.~De Breuker, X.~Wang, ``Predictor-based adaptive incremental nonlinear dynamic inversion for fault-tolerant flight control,'' \emph{IFAC-PapersOnLine}, vol.~55, no.~6, pp.~730--736, 2022, doi:10.1016/j.ifacol.2022.07.214.
 \bibitem{falconi2021} G.~P.~Falcon\'{\i} Salazar, \emph{Adaptive Fault Tolerant Control for VTOL Aircraft with Actuator Redundancy}, thesis, Technical University of Munich, TUM.University Press, 2022, ISBN 978-3-95884-074-4, doi:10.14459/2021md1595568.
 \bibitem{franceschini2026} G.~Franceschini, G.~Raos, G.~Gozzini, D.~Invernizzi, ``Adaptive control allocation for incremental nonlinear dynamic inversion under actuator degradation,'' in \emph{34th Mediterranean Conference on Control and Automation (MED)}, pp.~704--709, 2026, doi:10.1109/MED70602.2026.11598288.
 \bibitem{hovakimyan2010} N.~Hovakimyan, C.~Cao, \emph{$\mathcal{L}_1$ Adaptive Control Theory: Guaranteed Robustness with Fast Adaptation}, SIAM, 2010.
@@ -558,9 +572,10 @@ full responsibility for the content of the published article.
 \bibitem{wang2021} X.~Wang, S.~Sun, ``Incremental fault-tolerant control for a hybrid quad-plane UAV subjected to a complete rotor loss,'' \emph{Aerospace Science and Technology}, vol.~125, 107105, 2022, doi:10.1016/j.ast.2021.107105.
 \bibitem{cai2025} J.~Cai, M.~Lovera, ``An active fault-tolerant online control allocation scheme for a dual-system UAV in transition flight,'' arXiv:2510.04853, 2025.
 \bibitem{fu2025} Y.~Fu, B.~Wang, H.~Zhao, M.~Zhou, N.~Li, Z.~Gao, ``Adaptive safety attitude control of a hybrid VTOL UAV under transition flight subject to multiple faults and uncertainties,'' \emph{Aerospace Science and Technology}, vol.~163, 110284, 2025, doi:10.1016/j.ast.2025.110284.
-\bibitem{mueller2014} M.~W.~Mueller, R.~D'Andrea, ``Stability and control of a quadrocopter despite the complete loss of one, two, or three propellers,'' in \emph{IEEE International Conference on Robotics and Automation (ICRA)}, pp.~45--52, 2014, doi:10.1109/ICRA.2014.6906588.
-\bibitem{harkegard2002} O.~H\"{a}rkeg\aa{}rd, ``Efficient active set algorithms for solving constrained least squares problems in aircraft control allocation,'' in \emph{41st IEEE Conference on Decision and Control}, vol.~2, pp.~1295ff., 2002, doi:10.1109/CDC.2002.1184694.
-\bibitem{beard2012} R.~W.~Beard, T.~W.~McLain, \emph{Small Unmanned Aircraft: Theory and Practice}, Princeton University Press, 2012; coefficients from \texttt{github.com/byu-magicc/mavsim\_public}.
+\bibitem{wangban2023} B.~Wang, D.~Zhu, L.~Han, H.~Gao, Z.~Gao, Y.~Zhang, ``Adaptive fault-tolerant control of a hybrid canard rotor/wing UAV under transition flight subject to actuator faults and model uncertainties,'' \emph{IEEE Transactions on Aerospace and Electronic Systems}, vol.~59, no.~4, pp.~4559--4574, 2023.
 \bibitem{px4models} PX4 Gazebo models, \texttt{standard\_vtol}, \texttt{github.com/PX4/PX4-gazebo-models}, accessed 27 Oct 2026.
+\bibitem{beard2012} R.~W.~Beard, T.~W.~McLain, \emph{Small Unmanned Aircraft: Theory and Practice}, Princeton University Press, 2012; coefficients from \texttt{github.com/byu-magicc/mavsim\_public}.
+\bibitem{harkegard2002} O.~H\"{a}rkeg\aa{}rd, ``Efficient active set algorithms for solving constrained least squares problems in aircraft control allocation,'' in \emph{41st IEEE Conference on Decision and Control}, vol.~2, pp.~1295ff., 2002, doi:10.1109/CDC.2002.1184694.
+\bibitem{johansen2013} T.~A.~Johansen, T.~I.~Fossen, ``Control allocation---A survey,'' \emph{Automatica}, vol.~49, no.~5, pp.~1087--1103, 2013, doi:10.1016/j.automatica.2013.01.035.
 \end{thebibliography}
 \end{document}
