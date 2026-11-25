@@ -67,3 +67,7 @@ writes logs to `results/logs/` and commits each finished step.
 
 To add a controller, subclass `INDIController`, override `effectiveness()` and add one line to
 the registry (`src/controllers.py` or `src/qp_controllers.py`). The tests and benchmarks pick it up.
+
+## License
+
+Code: MIT (see `LICENSE`). The manuscript in `paper/` is under review and is not covered by the MIT license.
