@@ -18,3 +18,10 @@ paper/*.fls
 paper/*.fdb_latexmk
 results/logs/
 results/seed_repeat_parts/
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.spl
+paper/submission/*.aux
+paper/submission/*.log
+paper/submission/*.out

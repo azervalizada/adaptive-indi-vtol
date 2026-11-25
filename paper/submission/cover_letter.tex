@@ -1,0 +1,44 @@
+\documentclass[11pt,a4paper]{letter}
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\signature{Azer Valizada}
+\address{Azer Valizada\\ Technical University of Munich\\ TUM School of Engineering and Design\\ 85748 Garching bei M\"unchen, Germany\\ azer.valizada@tum.de}
+\date{\today}
+\begin{document}
+\begin{letter}{The Editors\\ Aerospace Science and Technology}
+\opening{Dear Editors,}
+
+I submit the manuscript \emph{``Adaptive Augmentation of Incremental Nonlinear Dynamic Inversion under Rotor Faults: A Fair
+Comparison of RLS, MRAC and $\mathcal{L}_1$ from Quadrotor to Quadplane''} for consideration as a research article in
+\emph{Aerospace Science and Technology}.
+
+Incremental nonlinear dynamic inversion (INDI) is now widely used on multirotors and hybrid VTOL aircraft. Its only model term,
+the control-effectiveness matrix, is exactly what a rotor fault corrupts, and three families of adaptive augmentation have been
+proposed to correct it: recursive least squares, predictor-based model-reference adaptive control and $\mathcal{L}_1$ adaptive
+augmentation. Each has so far been shown on its own vehicle and tuned by its own authors. This manuscript compares them under one
+protocol, with scenarios, metrics and a tuning rule fixed before any adaptive method was run, on a quadrotor and on a quadplane
+with weighted least-squares allocation over rotors and control surfaces. The main findings are:
+\begin{itemize}
+\item $\mathcal{L}_1$ recovers fastest from rotor faults on both vehicles and under gusts, noise and model errors, but has the
+smallest delay margin; a one-axis linear model explains why.
+\item RLS reaches oracle-level control only if its measurement includes the wing's known contribution and its estimate is
+bounded away from zero; even then it does not identify the fault. MRAC depends on the aerodynamic model and on air data.
+\item A complete lift-rotor loss on the quadplane is recoverable only from 6--8\,m/s, a limit that a controller-independent trim
+analysis shows to be physical under pitch and heading hold; continuing the transition lets the aircraft outrun a loss at lower
+speed.
+\end{itemize}
+We believe these results are useful to readers of the journal who design fault-tolerant flight control for VTOL aircraft, and
+that the fixed protocol, the reported failures of our own first interpretations and the open code make the comparison easy to
+check and extend.
+
+The work is simulation-based. All code, scenario definitions and result data are openly available at
+\url{https://github.com/azervalizada/adaptive-indi-vtol}. The use of the AI assistant Claude (Anthropic) in developing the code
+and in preparing the manuscript is described in the Methods section and in the AI declaration, in line with the journal's policy.
+The manuscript is original, has not been published, and is not under consideration elsewhere. The author declares no competing
+interests.
+
+\closing{Yours sincerely,}
+\end{letter}
+\end{document}

@@ -1,15 +1,13 @@
-% Second draft, 29 Oct 2026 (after the independent code review and the rerun of Stages 3-4).
+% Manuscript for Aerospace Science and Technology (Elsevier), elsarticle template, 25 Nov 2026.
 % Build: cd paper && xelatex main && xelatex main
-% Figures come from ../results (python run_figures.py). Bibliography checked 30 Oct 2026 against publisher/repository pages.
-\documentclass[11pt,a4paper]{article}
+% Figures come from ../results (python run_figures.py). Bibliography checked 25 Nov 2026 against publisher/repository pages.
+\documentclass[preprint,12pt,a4paper]{elsarticle}
 \usepackage{fontspec}
 \setmainfont{Latin Modern Roman}
 \setmonofont{Latin Modern Mono}
-\usepackage[margin=2.4cm]{geometry}
 \usepackage{amsmath,amssymb,bm}
 \usepackage{graphicx}
 \usepackage{booktabs,tabularx,multirow,array}
-\usepackage[numbers,sort&compress]{natbib}
 \usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
 \usepackage{caption}
@@ -17,35 +15,48 @@
 \graphicspath{{../results/}}
 \newcommand{\vect}[1]{\bm{#1}}
 \newcommand{\todo}[1]{\textcolor{red}{[#1]}}
-\setlength{\parskip}{3pt}
-
-\title{Adaptive Augmentation of Incremental Nonlinear Dynamic Inversion under Rotor Faults:\\
-A Fair Comparison of RLS, MRAC and $\mathcal{L}_1$ from Quadrotor to Quadplane}
-\author{Azer Valizada\thanks{M.Sc.\ student, Mechanical Engineering, Technical University of Munich. \todo{contact}}}
-\date{Draft, 29 October 2026}
+\biboptions{sort&compress}
+\journal{Aerospace Science and Technology}
 
 \begin{document}
-\maketitle
-
+\begin{frontmatter}
+\title{Adaptive Augmentation of Incremental Nonlinear Dynamic Inversion under Rotor Faults:
+A Fair Comparison of RLS, MRAC and $\mathcal{L}_1$ from Quadrotor to Quadplane}
+\author{Azer Valizada}
+\ead{azer.valizada@tum.de}
+\affiliation{organization={Technical University of Munich, TUM School of Engineering and Design, Department of Mechanical Engineering},
+            addressline={Boltzmannstra{\ss}e 15},
+            postcode={85748},
+            city={Garching bei M\"unchen},
+            country={Germany}}
 \begin{abstract}
-Incremental nonlinear dynamic inversion (INDI) replaces most model knowledge with measured angular acceleration and keeps
-a single model term, the control-effectiveness matrix. A rotor fault corrupts exactly this term. We compare three adaptive
-augmentations of INDI, recursive least squares (RLS), predictor-based model-reference adaptive control (MRAC) and
-$\mathcal{L}_1$ adaptive augmentation, under one protocol: the same plants, scenarios and metrics, fixed before any
-adaptive method was run, and one tuning rule applied to each method on a separate scenario set. On a quadrotor,
-$\mathcal{L}_1$ closes 183\,\% of the gap between baseline INDI and an INDI that knows the fault (RLS 153\,\%, MRAC 87\,\%).
-On a 5\,kg quadplane flying at 0--12\,m/s, with weighted least-squares allocation over rotors and control surfaces,
-$\mathcal{L}_1$ closes 145\,\%, RLS 106\,\% and MRAC 63\,\% (81\,\% on the scenarios every method survives). Two design details decide the estimators. RLS must remove the wing's
-known contribution from its measurement, and its estimate must be bounded away from zero: an estimate at zero removes the rotor
-from the allocation and thereby from its own data. Even then RLS does not identify the fault: its estimate freezes at a wrong value,
-yet control stays good. MRAC needs the aerodynamic model, and with an unknown wind its estimates drift even
-without a fault. $\mathcal{L}_1$ is also best under gusts, doubled sensor noise, a slower motor and a wrong aerodynamic model. Its price
-is the delay margin: 18\,ms on the quadrotor and 20\,ms on the quadplane, against 25 and 45\,ms for the other methods. A one-axis linear
-model reproduces these margins and shows that $\mathcal{L}_1$ doubles the inner-loop crossover frequency. On the quadplane, the
-complete loss of a lift rotor can be recovered from 6--8\,m/s. A controller-independent trim analysis gives the same limit under
-pitch and heading hold, so no adaptive method moves it by more than 1\,m/s. If the rotor fails during the transition, continuing to
-accelerate lets the aircraft complete it after a loss at 4\,m/s in most cases.
+Incremental nonlinear dynamic inversion (INDI) needs a single model term, the control-effectiveness matrix, and a rotor fault
+corrupts exactly this term. We compare three adaptive augmentations of INDI, recursive least squares (RLS), predictor-based
+model-reference adaptive control (MRAC) and $\mathcal{L}_1$ adaptive augmentation, under one protocol: the same plants, scenarios and
+metrics, fixed before any adaptive method was run, and one tuning rule applied on a separate scenario set. On a quadrotor,
+$\mathcal{L}_1$ closes 183\,\% of the gap between baseline INDI and an INDI that knows the fault (RLS 153\,\%, MRAC 87\,\%). On a
+5\,kg quadplane at 0--12\,m/s, with weighted least-squares allocation over rotors and control surfaces, $\mathcal{L}_1$ closes 145\,\%,
+RLS 106\,\% and MRAC 63\,\% (81\,\% on the scenarios every method survives). RLS works only if it removes the wing's known
+contribution from its measurement and its estimate is bounded away from zero; even then the estimate freezes at a wrong value while
+control stays good. MRAC needs the aerodynamic model, and in unknown wind its estimates drift without a fault. $\mathcal{L}_1$ is also
+best under gusts, doubled sensor noise, a slower motor and a wrong aerodynamic model, but has the smallest delay margin (18 and
+20\,ms against 25 and 45\,ms), which a one-axis linear model explains by a doubled inner-loop crossover frequency. A complete
+lift-rotor loss is recoverable from 6--8\,m/s; a controller-independent trim analysis gives the same limit under pitch and heading
+hold. If the rotor fails during the transition, continuing to accelerate lets the aircraft complete it after a loss at 4\,m/s in
+most cases.
 \end{abstract}
+\begin{highlights}
+\item RLS, MRAC and $\mathcal{L}_1$ augmentations of INDI are compared under one fixed protocol
+\item $\mathcal{L}_1$ recovers fastest from rotor faults but has the smallest delay margin
+\item RLS needs the wing's known contribution and an estimate bounded away from zero
+\item Under pitch and heading hold, a lift-rotor loss is recoverable only from 6--8\,m/s
+\item Continuing the transition lets a quadplane outrun a rotor loss at low airspeed
+\end{highlights}
+\begin{keyword}
+Incremental nonlinear dynamic inversion \sep Adaptive control \sep $\mathcal{L}_1$ adaptive control \sep Fault-tolerant control \sep Quadplane \sep VTOL
+\end{keyword}
+\end{frontmatter}
+
 
 % =====================================================================================================
 \section{Introduction}
@@ -56,18 +67,19 @@ errors and has made it popular for multirotors and hybrid aircraft \cite{smeur20
 for example a damaged propeller, is different: it changes $G$ itself. The controller then still converges, because
 every residual error is measured again at the next step, but it does so more slowly, and the attitude transient grows.
 
-Three families of methods restore performance by adapting the controller online. Least-squares estimation of the
-effectiveness from INDI's own increments was proposed by Smeur et al.~\cite{smeur2016}. Predictor-based MRAC estimates the same
-quantities with a Lyapunov-derived law and has been used for adaptive control allocation \cite{falconi2021,franceschini2026}.
+Three families of methods restore performance by adapting the controller online. Estimation of the
+effectiveness from INDI's own increments, with a least-mean-squares update, was proposed by Smeur et al.~\cite{smeur2016}. Predictor-based MRAC estimates the same
+quantities with a Lyapunov-derived law and has been used for adaptive control allocation \cite{falconi2021,franceschini2026}; Franceschini et al.~\cite{franceschini2026}
+compare it with concurrent-learning and two-layer RLS estimators for the allocation of INDI on an over-actuated aircraft.
 $\mathcal{L}_1$ adaptive augmentation estimates a lumped uncertainty and cancels a low-pass-filtered copy of it
 \cite{hovakimyan2010,raos2026,mao2023}. Each has been shown on its own vehicle, tuned by its authors. For quadplanes,
 Wang and Sun~\cite{wang2021} handle the complete loss of a rotor with incremental adaptive sliding-mode control, Cai and Lovera~\cite{cai2025} reallocate
 rotors and surfaces during the transition with fault information assumed known, and Fu et al.~\cite{fu2025} design an adaptive
 fault-tolerant attitude controller for the transition. We found no study that compares RLS, MRAC and $\mathcal{L}_1$ on INDI
 under one protocol, none that follows them from a quadrotor to an over-actuated quadplane, and none that reports the minimum
-airspeed at which a quadplane survives a lift-rotor fault. \todo{literature check of 28 Oct used abstracts only; read full texts}
+airspeed at which a quadplane survives a lift-rotor fault.
 
-\paragraph{Contributions.}
+\paragraph{Contributions}
 \begin{enumerate}
 \item A comparison fixed in advance: scenarios and metrics were set before any adaptive method ran on a vehicle, every
   method was tuned on a separate scenario set with the same rule, and every later rule change was logged with its reason.
@@ -79,7 +91,7 @@ airspeed at which a quadplane survives a lift-rotor fault. \todo{literature chec
 \item For the quadplane, the minimum safe airspeed after a lift-rotor fault, checked against a controller-independent trim
   analysis, and the finding that continuing the transition outruns faults that cannot be recovered at constant speed.
 \end{enumerate}
-The simulation, tests and every script that produces a number in this paper are open \todo{repository link}.
+The simulation, tests and every script that produces a number in this paper are open at \url{https://github.com/azervalizada/adaptive-indi-vtol}.
 
 % =====================================================================================================
 \section{Vehicles and fault model}
@@ -155,10 +167,13 @@ On the quadplane four lift rotors and two surfaces produce three moments and the
 $4\times 6$ and its surface columns grow with $\bar q$. Equation~\eqref{eq:indi} is replaced by weighted least squares with
 actuator limits,
 \begin{equation}
-\min_{\Delta\vect u}\ \gamma\,\|W_v(G\Delta\vect u - \vect v)\|^2 + \|W_u(\Delta\vect u - \Delta\vect u_p)\|^2
-\quad\text{s.t.}\quad \vect u_{\min} - \vect u_0 \le \Delta\vect u \le \vect u_{\max} - \vect u_0,
+\begin{aligned}
+&\min_{\Delta\vect u}\ \gamma\,\|W_v(G\Delta\vect u - \vect v)\|^2 + \|W_u(\Delta\vect u - \Delta\vect u_p)\|^2\\
+&\text{s.t.}\quad \vect u_{\min} - \vect u_0 \le \Delta\vect u \le \vect u_{\max} - \vect u_0,
+\end{aligned}
 \end{equation}
-solved by the active-set method of H\"{a}rkeg\aa{}rd~\cite{harkegard2002} ($\gamma = 1000$, $W_v = \mathrm{diag}(1,1,0.3,0.3)$). Actuators are
+solved by the active-set method of H\"{a}rkeg\aa{}rd~\cite{harkegard2002}, with $\gamma = 1000$ and
+$W_v = \mathrm{diag}(1,1,0.3,0.3)$. Actuators are
 normalised by their range and weighted equally; the preferred state (equal rotors, surfaces at zero) is approached with a 0.2\,s
 time constant. No scheduling rule is needed: as $\bar q$ grows, the surfaces become the cheaper way to produce a moment and
 take over the load. The pusher closes the forward-acceleration loop incrementally on the accelerometer, pitch is held at zero,
@@ -168,13 +183,13 @@ and the servo positions come from a first-order model in the controller.
 All three plug into the same INDI core: RLS and MRAC replace $G$ by $G\,\mathrm{diag}(\hat{\vect\eta})$; $\mathcal{L}_1$
 modifies $\vect\nu$.
 
-\paragraph{Known non-rotor part.} On the quadplane the angular acceleration and the body-$z$ force also contain the wing (damping,
+\paragraph{Known non-rotor part} On the quadplane the angular acceleration and the body-$z$ force also contain the wing (damping,
 static stability, surfaces, lift), the pusher torque and the gyroscopic term. RLS and MRAC receive the same nominal model of this part,
 computed from the measured velocity, attitude, rates and the servo model, with ground velocity taken as air velocity:
 $\vect o = \big[J^{-1}(\vect M_\text{aero} + \vect M_\text{push} - \vect\omega\times J\vect\omega);\ -F_{z,\text{aero}}\big]$, passed through the
 same synchronisation filter ($\vect o_f$). $\mathcal{L}_1$ uses no model of it.
 
-\paragraph{RLS.} Over $L$ control steps, INDI's own linearisation gives a measurement equation linear in $\vect\eta$,
+\paragraph{RLS} Over $L$ control steps, INDI's own linearisation gives a measurement equation linear in $\vect\eta$,
 \begin{equation}
 \vect y = \Delta\left(\begin{bmatrix}\dot{\vect\omega}_f\\ -m a_{z,f}\end{bmatrix} - \vect o_f\right)
 = G_\text{rot}\,\mathrm{diag}(\Delta\vect u_f)\,\vect\eta = \Phi\vect\eta,
@@ -183,13 +198,13 @@ solved recursively with forgetting factor $\lambda$, rows weighted by their meas
 against closed-loop bias, and $\hat{\vect\eta}$ clipped to $[\eta_{\min}, 1.5]$; $\vect o$ is zero on the quadrotor. On noise-free
 data, batch least squares on these rows returns the true $\vect\eta$ at 0, 8 and 12\,m/s (a regression test).
 
-\paragraph{MRAC.} A predictor of the rotational dynamics runs beside the vehicle,
+\paragraph{MRAC} A predictor of the rotational dynamics runs beside the vehicle,
 $\dot{\hat{\vect\omega}} = J^{-1}B\,\mathrm{diag}(\hat{\vect\eta})\vect T + \vect o_{1:3} - a(\hat{\vect\omega}-\vect\omega)$,
 and the Lyapunov function $V = \tfrac12\vect e^\top\vect e + \tfrac12\tilde{\vect\eta}^\top\Gamma^{-1}\tilde{\vect\eta}$ gives
 $\dot{\hat{\vect\eta}} = -\Gamma\,\mathrm{diag}(\vect T)\,(J^{-1}B)^\top\vect e$ with $\dot V = -a\vect e^\top\vect e$; a gradient term
 on the accelerometer-measured thrust (minus the filtered nominal lift) is added.
 
-\paragraph{$\mathcal{L}_1$.} With $\dot{\vect\omega} \approx A(s)[\vect\nu_a] + \vect\sigma$, $A(s)$ the motor lag and $\vect\sigma$
+\paragraph{$\mathcal{L}_1$} With $\dot{\vect\omega} \approx A(s)[\vect\nu_a] + \vect\sigma$, $A(s)$ the motor lag and $\vect\sigma$
 everything INDI misses, a state predictor
 $\dot{\hat{\vect\omega}} = -a(\hat{\vect\omega}-\vect\omega) + A(s)[\vect\nu_a] + \hat{\vect\sigma}$, the piecewise-constant law
 \begin{equation}
@@ -204,14 +219,14 @@ rotor loss; we changed it to 0.1 after seeing the results (Section~\ref{sec:lock
 
 % =====================================================================================================
 \section{Evaluation protocol}
-\paragraph{Scenarios.} Quadrotor: hover with position steps; a grid of 24 faults (4 rotors $\times$ $\eta\in\{0.8, 0.65, 0.5\}$
+\paragraph{Scenarios} Quadrotor: hover with position steps; a grid of 24 faults (4 rotors $\times$ $\eta\in\{0.8, 0.65, 0.5\}$
 $\times$ abrupt / 1\,s ramp) and 100 Monte Carlo runs (random fault $\eta\sim U[0.5,0.9]$, mass $\pm5$\,\%, inertia $\pm10$\,\%, noise
 seed). Quadplane: steady level flight at $V\in\{0,4,6,8,10,12\}$\,m/s with 4 rotors $\times$ $\eta\in\{0.6, 0.3, 0\}$ (72 runs);
 a speed sweep 0--12\,m/s in 1\,m/s steps for $\eta\in\{0.3, 0.15, 0\}$; 100 Monte Carlo runs including $\pm20$\,\% error in the
 surface effectiveness. Transition: hover, then 1, 2 or 3\,m/s$^2$ to 16\,m/s, with a front or rear rotor failing as the reference
 passes $V_f\in\{0,2,\dots,12\}$\,m/s, $\eta\in\{0.3, 0\}$ (84 runs). Gust checks apply a 0.5\,s step moment to the healthy vehicle.
 
-\paragraph{Metrics.} Quadrotor: peak attitude error in $[t_0, t_0 + t_\text{ramp} + 0.5\,\text{s}]$. The quadplane's inertia is about 50
+\paragraph{Metrics} Quadrotor: peak attitude error in $[t_0, t_0 + t_\text{ramp} + 0.5\,\text{s}]$. The quadplane's inertia is about 50
 times larger and its failures develop over seconds, so the window is 4\,s and the primary metric is the peak \emph{tilt} error,
 the angle between the desired and actual body $z$ axes; heading is reported separately, because without a rudder a heading drift
 is not by itself unsafe. Loss of control: divergence (including more than 100\,m from the reference), tilt above $90^\circ$, or more
@@ -219,7 +234,7 @@ than 5\,m altitude loss. Recovered: final tilt below $1^\circ$ and heading below
 $\sum(b - m)/\sum(b - o)$ over scenarios survived by all controllers, with $b$, $m$, $o$ the baseline, method and oracle values,
 and a 95\,\% bootstrap interval (4000 resamples); method differences use a paired bootstrap.
 
-\paragraph{Tuning.} Each method was tuned on a separate tuning set with one rule: lowest mean primary metric over the faulty
+\paragraph{Tuning} Each method was tuned on a separate tuning set with one rule: lowest mean primary metric over the faulty
 scenarios, subject to (a) no loss of control, (b) fault-free attitude RMS at most 1.05 times the baseline's (+0.01$^\circ$ on the
 quadplane, whose noise floor is 0.002$^\circ$), and (c) healthy-rotor estimates within 0.15 of one. Rule (c) was added after the first
 RLS run, where the best-scoring setting drove healthy estimates to the clip limit. Every method on both vehicles gets the same procedure and budget: a 48-candidate grid, then a local search of up to 48 more
@@ -234,13 +249,18 @@ estimate per step, which is practically the unfiltered limit: the tuned $\mathca
 Some choices are ties within 0.1\,\% of the score (RLS $\lambda = 1$ against 0.999, MRAC $\gamma_d = 0$ against 3). The quadplane tuning set
 is small: four partial faults at 2--11\,m/s and one fault-free run, without hover, complete loss or wind.
 
-\paragraph{Independent reviews.} Before the final runs, two blind reviews of the code (by separate agents that had not seen it being
-written) were carried out. The first found two critical and seven major problems in the quadplane part, among them the incomplete RLS
+\paragraph{Independent reviews} Before the final runs, two blind reviews of the code were carried out by separate instances of the AI assistant
+Claude that had not seen the code being written and received only a copy of the code, tests and README. The first found two critical and seven major problems in the quadplane part, among them the incomplete RLS
 measurement model above, an unbounded pitching moment at large angles, and a per-speed table that averaged each controller over its own
 survivors. The second found no critical problem; its major findings were a wing force that changed sign in pure sideways flow (lift,
 drag and pitch moment now use the dynamic pressure of the flow in the body $x$--$z$ plane), a post-stall moment that did not match the
 post-stall force, the frozen RLS estimate (Section~\ref{sec:lockin}) and the tuning asymmetries above. After each review every quadplane and
 transition result was re-tuned and rerun; the reviews, the fixes and their effect on each number are in the repository.
+
+\paragraph{Use of AI tools} The simulation code, the analysis scripts and the first drafts of the text were developed with the AI
+assistant Claude (Anthropic; Claude Opus models) under the author's direction; the scenarios, metrics and tuning rules were decided or
+approved by the author before the results were seen. The two code reviews above were carried out by separate Claude instances. All
+code and data are available in the repository, so every result can be reproduced without the AI tool.
 
 % =====================================================================================================
 \section{Results: quadrotor}
@@ -347,7 +367,7 @@ further (complete loss: 4.5 / 4--4.5\,m/s): a recovery mode that trades heading 
 \end{figure}
 
 \subsection{What the estimators need}\label{sec:lockin}
-\paragraph{RLS: the wing's contribution and a lower bound.} In our first quadplane runs RLS closed only 42\,\% of the gap. Two causes were
+\paragraph{RLS: the wing's contribution and a lower bound} In our first quadplane runs RLS closed only 42\,\% of the gap. Two causes were
 found. First, its measurement model removed only the surfaces' increment and left the wing's damping in $\vect y$, which the regression
 attributed to the rotors: on noise-free data at 8\,m/s, batch least squares returned $\hat{\vect\eta} = [-0.13, -3.57, 0.46, 0.54]$ for a true
 $[0.6, 1, 1, 1]$. The tuning had answered this with a dead-zone so wide that above 6\,m/s RLS made no updates at all. With the known non-rotor
@@ -360,7 +380,7 @@ $-38$\,\% in the Monte Carlo set and 20\,\% in the transition, with 6 extra loss
 is that the estimate cannot show a lost rotor exactly. We expect the lock-in in any estimator that feeds an allocation which can switch an
 actuator off on the basis of the estimate.
 
-\paragraph{RLS does not identify the fault.} The bound prevents the lock-in, but not a milder form of it. After an abrupt fault the
+\paragraph{RLS does not identify the fault} The bound prevents the lock-in, but not a milder form of it. After an abrupt fault the
 allocation quickly redistributes the load, the increments $\Delta\vect u_f$ fall below the dead-zone within about 0.2\,s, and the estimate
 freezes. Where it freezes depends on the transient, not on the fault: rotor 1 at $\eta = 0.6$ and 8\,m/s ends at
 $\hat{\vect\eta} = [0.32, 0.93, 1.21, 0.83]$. The mean final estimate error is 0.15 on the grid and 0.12 in the transition, the same as
@@ -368,7 +388,7 @@ MRAC's in the transition. Control is nevertheless as good as the oracle's, becau
 rotors did not deliver in the directions it is excited in, not the true one. RLS should therefore not be read as a fault-identification
 method; a regression test in the repository pins this behaviour.
 
-\paragraph{MRAC: the aerodynamic model and the air data.} Tuned without the nominal aerodynamic model, no MRAC setting satisfies the tuning
+\paragraph{MRAC: the aerodynamic model and the air data} Tuned without the nominal aerodynamic model, no MRAC setting satisfies the tuning
 rule: its healthy-rotor estimates drift by at least 0.5 in steady flight. RLS without the model still works (88\,\% on the grid), but tunes
 itself towards adapting less. With the model, MRAC depends on knowing the air velocity. With the aerodynamic coefficients of the true aircraft
 off by up to $\pm30$\,\% and an unknown constant wind of up to 3\,m/s (100 Monte Carlo and 40 fault-free runs), MRAC's estimates drift by more
@@ -478,7 +498,7 @@ away from zero, but it does not identify the fault and it reacts to gusts as if 
 fewest runs in the transition; on the quadplane it rests on
 the aerodynamic model and on air data, and an unknown wind is enough to corrupt its estimates.
 
-\paragraph{Fair comparison.} Several of our own first readings did not survive checking: that RLS is weak on the quadplane because of
+\paragraph{Fair comparison} Several of our own first readings did not survive checking: that RLS is weak on the quadplane because of
 its inertia (it was an incomplete measurement model and the lock-in), that RLS identifies the fault (it controls well with a wrong
 estimate), that $\mathcal{L}_1$ gains most at low airspeed (an artefact of the first wing model), and that the minimum airspeed is physical
 without qualification (it is, under pitch and heading hold). Some were caught by questions the benchmark could not answer itself, a trace of
@@ -486,7 +506,7 @@ the worst case and a controller-independent trim analysis; the others by two ind
 rotor loss in hover changed twice with corrections of the aerodynamic model at large angles; we therefore report only that no controller
 recovers it. The reviews also showed that the RLS bound is a design decision with a large effect, and we report both values.
 
-\paragraph{Limitations.} Simulation only; parameters from a public model and a textbook aircraft, not an identified vehicle. No rotor--wing
+\paragraph{Limitations} Simulation only; parameters from a public model and a textbook aircraft, not an identified vehicle. No rotor--wing
 interaction and no rotor drag (hence no yaw damping in hover); rotor thrust independent of airspeed; no rudder; the post-stall moments are a
 simple flat-plate model, and the surface and damping derivatives are not reduced beyond stall. Position, velocity and attitude are measured
 without noise; only the gyroscope, accelerometer and pitot are noisy. The RLS bound on the quadplane was changed after seeing results. MRAC
@@ -505,19 +525,39 @@ transition lets the aircraft outrun a loss at 4\,m/s (rear rotor at 1\,m/s$^2$: 
 tuning of $\mathcal{L}_1$, and validation in PX4 software-in-the-loop simulation.
 
 % =====================================================================================================
+\section*{CRediT authorship contribution statement}
+\textbf{Azer Valizada:} Conceptualization, Methodology, Software, Validation, Formal analysis, Investigation, Visualization,
+Writing -- original draft, Writing -- review \& editing.
+
+\section*{Declaration of competing interest}
+The author declares that he has no known competing financial interests or personal relationships that could have appeared to
+influence the work reported in this paper.
+
+\section*{Funding}
+This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.
+
+\section*{Data availability}
+All code, scenario definitions, tuning logs and result data are openly available at
+\url{https://github.com/azervalizada/adaptive-indi-vtol}.
+
+\section*{Declaration of generative AI and AI-assisted technologies in the manuscript preparation process}
+During the preparation of this work the author used Claude (Anthropic) to write and debug the simulation code, to run and summarise
+the analyses, and to draft and edit the text. After using this tool, the author reviewed and edited the content as needed and takes
+full responsibility for the content of the published article.
+
 \begin{thebibliography}{99}\small
 \bibitem{sieberling2010} S.~Sieberling, Q.~P.~Chu, J.~A.~Mulder, ``Robust flight control using incremental nonlinear dynamic inversion and angular acceleration prediction,'' \emph{Journal of Guidance, Control, and Dynamics}, vol.~33, no.~6, pp.~1732--1742, 2010, doi:10.2514/1.49978.
 \bibitem{smeur2016} E.~J.~J.~Smeur, Q.~P.~Chu, G.~C.~H.~E.~de Croon, ``Adaptive incremental nonlinear dynamic inversion for attitude control of micro air vehicles,'' \emph{Journal of Guidance, Control, and Dynamics}, vol.~39, no.~3, pp.~450--461, 2016, doi:10.2514/1.G001490.
 \bibitem{sun2020} S.~Sun, X.~Wang, Q.~P.~Chu, C.~C.~de Visser, ``Incremental nonlinear fault-tolerant control of a quadrotor with complete loss of two opposing rotors,'' \emph{IEEE Transactions on Robotics}, vol.~37, no.~1, pp.~116--130, 2021, doi:10.1109/TRO.2020.3010626.
 \bibitem{deponti2023} T.~M.~L.~De Ponti, E.~J.~J.~Smeur, B.~W.~D.~Remes, ``Incremental nonlinear dynamic inversion controller for a variable skew quad plane,'' in \emph{International Conference on Unmanned Aircraft Systems (ICUAS)}, pp.~241--248, 2023, doi:10.1109/ICUAS57906.2023.10156289.
-\bibitem{falconi2021} G.~P.~Falcon\'{\i} Salazar, \emph{Adaptive Fault Tolerant Control for VTOL Aircraft with Actuator Redundancy}, thesis, Technical University of Munich, TUM.University Press, 2022, ISBN 978-3-95884-074-4.
+\bibitem{falconi2021} G.~P.~Falcon\'{\i} Salazar, \emph{Adaptive Fault Tolerant Control for VTOL Aircraft with Actuator Redundancy}, thesis, Technical University of Munich, TUM.University Press, 2022, ISBN 978-3-95884-074-4, doi:10.14459/2021md1595568.
 \bibitem{franceschini2026} G.~Franceschini, G.~Raos, G.~Gozzini, D.~Invernizzi, ``Adaptive control allocation for incremental nonlinear dynamic inversion under actuator degradation,'' in \emph{34th Mediterranean Conference on Control and Automation (MED)}, pp.~704--709, 2026, doi:10.1109/MED70602.2026.11598288.
 \bibitem{hovakimyan2010} N.~Hovakimyan, C.~Cao, \emph{$\mathcal{L}_1$ Adaptive Control Theory: Guaranteed Robustness with Fast Adaptation}, SIAM, 2010.
-\bibitem{raos2026} G.~Raos, G.~Gozzini, D.~Invernizzi, ``Performance and robustness analysis of INDI flight control laws with $\mathcal{L}_1$ adaptive augmentation,'' CEAS EuroGNC, paper CEAS-GNC-2026-072, 2026.
+\bibitem{raos2026} G.~Raos, G.~Gozzini, D.~Invernizzi, ``Performance and robustness analysis of INDI flight control laws with $\mathcal{L}_1$ adaptive augmentation,'' in \emph{Proceedings of the CEAS EuroGNC Conference}, Madrid, paper CEAS-GNC-2026-072, 2026, doi:10.82124/CEAS-GNC-2026-072.
 \bibitem{mao2023} J.~Mao, J.~Yeom, S.~Nair, G.~Loianno, ``From propeller damage estimation and adaptation to fault tolerant control: enhancing quadrotor resilience,'' \emph{IEEE Robotics and Automation Letters}, 2024, doi:10.1109/LRA.2024.3380923 (arXiv:2310.13091).
 \bibitem{wang2021} X.~Wang, S.~Sun, ``Incremental fault-tolerant control for a hybrid quad-plane UAV subjected to a complete rotor loss,'' \emph{Aerospace Science and Technology}, vol.~125, 107105, 2022, doi:10.1016/j.ast.2021.107105.
 \bibitem{cai2025} J.~Cai, M.~Lovera, ``An active fault-tolerant online control allocation scheme for a dual-system UAV in transition flight,'' arXiv:2510.04853, 2025.
-\bibitem{fu2025} Y.~Fu, B.~Wang, H.~Zhao, M.~Zhou, N.~Li, Z.~Gao, ``Adaptive safety attitude control of a hybrid VTOL UAV under transition flight subject to multiple faults and uncertainties,'' \emph{Aerospace Science and Technology}, vol.~163, 110284, 2025.
+\bibitem{fu2025} Y.~Fu, B.~Wang, H.~Zhao, M.~Zhou, N.~Li, Z.~Gao, ``Adaptive safety attitude control of a hybrid VTOL UAV under transition flight subject to multiple faults and uncertainties,'' \emph{Aerospace Science and Technology}, vol.~163, 110284, 2025, doi:10.1016/j.ast.2025.110284.
 \bibitem{mueller2014} M.~W.~Mueller, R.~D'Andrea, ``Stability and control of a quadrocopter despite the complete loss of one, two, or three propellers,'' in \emph{IEEE International Conference on Robotics and Automation (ICRA)}, pp.~45--52, 2014, doi:10.1109/ICRA.2014.6906588.
 \bibitem{harkegard2002} O.~H\"{a}rkeg\aa{}rd, ``Efficient active set algorithms for solving constrained least squares problems in aircraft control allocation,'' in \emph{41st IEEE Conference on Decision and Control}, vol.~2, pp.~1295ff., 2002, doi:10.1109/CDC.2002.1184694.
 \bibitem{beard2012} R.~W.~Beard, T.~W.~McLain, \emph{Small Unmanned Aircraft: Theory and Practice}, Princeton University Press, 2012; coefficients from \texttt{github.com/byu-magicc/mavsim\_public}.
