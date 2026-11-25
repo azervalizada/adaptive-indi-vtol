@@ -1,0 +1,25 @@
+mrac: coarse grid 48 candidates, 36 admissible
+   refine: +2 (total refine 2), best score 0.5195
+   refine: +6 (total refine 8), best score 0.5162
+   refine: +6 (total refine 14), best score 0.5162
+mrac: 62 candidates (14 refine), 45 pass the rule (limit for (b): 0.0130 deg)
+   {'a': 30.0, 'gamma_eta': 16.0, 'gamma_d': 0.0, 'gamma_thrust': 1.0} score 0.5162  healthy_dev 0.017  rms 0.0029
+   {'a': 30.0, 'gamma_eta': 16.0, 'gamma_d': 3.0, 'gamma_thrust': 1.0} score 0.5164  healthy_dev 0.017  rms 0.0029
+   {'a': 30.0, 'gamma_eta': 16.0, 'gamma_d': 0.0, 'gamma_thrust': 0.3} score 0.5195  healthy_dev 0.017  rms 0.0029
+   {'a': 30.0, 'gamma_eta': 16.0, 'gamma_d': 3.0, 'gamma_thrust': 0.3} score 0.5196  healthy_dev 0.017  rms 0.0029
+   {'a': 30.0, 'gamma_eta': 16.0, 'gamma_d': 0.0, 'gamma_thrust': 0.1} score 0.5276  healthy_dev 0.017  rms 0.0029
+   {'a': 30.0, 'gamma_eta': 16.0, 'gamma_d': 3.0, 'gamma_thrust': 0.1} score 0.5278  healthy_dev 0.017  rms 0.0029
+   {'a': 30.0, 'gamma_eta': 16.0, 'gamma_d': 30.0, 'gamma_thrust': 0.1} score 0.5289  healthy_dev 0.017  rms 0.0029
+   {'a': 10.0, 'gamma_eta': 4.0, 'gamma_d': 0.0, 'gamma_thrust': 0.1} score 0.5314  healthy_dev 0.008  rms 0.0029
+   {'a': 10.0, 'gamma_eta': 4.0, 'gamma_d': 30.0, 'gamma_thrust': 0.1} score 0.5341  healthy_dev 0.008  rms 0.0029
+   {'a': 30.0, 'gamma_eta': 16.0, 'gamma_d': 0.0, 'gamma_thrust': 0.03} score 0.5383  healthy_dev 0.017  rms 0.0029
+WINNER: {'a': 30.0, 'gamma_eta': 16.0, 'gamma_d': 0.0, 'gamma_thrust': 1.0}
+   a = 30.0: interior, neighbours all evaluated
+   gamma_eta = 16.0: interior, neighbours all evaluated
+   gamma_d = 0.0: ladder end (bound), neighbours all evaluated
+   gamma_thrust = 1.0: interior, neighbours all evaluated
+unconstrained best (rule (a) only, reported, not used): {'a': 10.0, 'gamma_eta': 64.0, 'gamma_d': 0.0, 'gamma_thrust': 0.03} score 0.4155 healthy_dev 1.000
+
+real	9m58.082s
+user	19m33.269s
+sys	0m0.321s

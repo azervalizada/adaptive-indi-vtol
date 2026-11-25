@@ -1,0 +1,8 @@
+Stage 4 transition grid, sensitivity variants next to the main controllers
+
+rls          completed  67  lost  8  errors 0  gap closed    86% [80, 93] (n=74)
+rls_eta0     completed  65  lost  9  errors 0  gap closed    20% [-66, 76] (n=72)
+rls_noaero   completed  67  lost  8  errors 0  gap closed    77% [71, 84] (n=74)
+mrac         completed  67  lost  4  errors 0  gap closed    78% [64, 91] (n=74)
+mrac_eta01   completed  68  lost  7  errors 0  gap closed    82% [73, 92] (n=74)
+l1           completed  68  lost  8  errors 0  gap closed   134% [127, 141] (n=73)

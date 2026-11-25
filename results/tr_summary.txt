@@ -1,0 +1,81 @@
+Nominal transition [3 scenarios, 3 survived by all]
+
+controller  compl surv_nc  lost  tilt_peak tilt_final  alt_dev speed_err healthy_dev  eta_err   gap closed [95% CI] (own set)   | common set
+baseline        3       0     0      0.025      0.005    0.025     0.074         nan      nan   -
+oracle          3       0     0      0.025      0.005    0.025     0.074         nan      nan   -
+rls             3       0     0      0.025      0.005    0.025     0.075       0.083    0.042   -
+mrac            3       0     0      0.025      0.005    0.025     0.074       0.018    0.003   -
+l1              3       0     0      0.021      0.005    0.023     0.077         nan      nan   -
+
+Transition grid [84 scenarios, 75 survived by all]
+
+controller  compl surv_nc  lost  tilt_peak tilt_final  alt_dev speed_err healthy_dev  eta_err   gap closed [95% CI] (own set)   | common set
+baseline       67      10     7      2.193      0.105    0.090     0.588         nan      nan   -
+oracle         67      10     7      1.304      0.084    0.057     0.565         nan      nan   -
+rls            67       9     8      1.431      0.086    0.065     0.570       0.063    0.120      86%  [80, 93] (n=74)   |    86%  [80, 93] (n=73)
+mrac           67      13     4      1.454      0.084    0.079     0.579       0.016    0.120      78%  [64, 91] (n=74)   |    83%  [74, 93] (n=73)
+l1             68       8     8      0.990      0.059    0.102     0.517         nan      nan     134%  [127, 141] (n=73)   |   134%  [127, 141] (n=73)
+
+Outcome map: per fault speed V_f, outcome for front rotor / rear rotor (C completed, s survived not recovered, L lost) and mean peak tilt [deg] of the survived runs
+
+eta = 0.3, accel = 1 m/s2
+controller         V_f 0         V_f 2         V_f 4         V_f 6         V_f 8        V_f 10        V_f 12
+baseline    sL   11.3     CC    2.3     CC    1.8     CC    1.6     CC    1.3     CC    1.0     CC    0.7   
+oracle      LL    nan     CC    1.4     CC    0.9     CC    0.8     CC    0.7     CC    0.6     CC    0.5   
+rls         LL    nan     CC    1.3     CC    0.6     CC    1.0     CC    0.9     CC    0.7     CC    0.5   
+mrac        sL    8.0     CC    1.8     CC    1.1     CC    0.9     CC    0.7     CC    0.6     CC    0.4   
+l1          LL    nan     CC    1.6     CC    0.6     CC    0.4     CC    0.4     CC    0.3     CC    0.2   
+
+eta = 0.3, accel = 2 m/s2
+controller         V_f 0         V_f 2         V_f 4         V_f 6         V_f 8        V_f 10        V_f 12
+baseline    Cs    2.2     CC    2.1     CC    1.8     CC    1.6     CC    1.3     CC    1.0     CC    0.7   
+oracle      Cs    2.1     CC    1.3     CC    0.9     CC    0.8     CC    0.7     CC    0.6     CC    0.4   
+rls         Cs    2.0     CC    1.3     CC    0.6     CC    0.8     CC    0.8     CC    0.7     CC    0.5   
+mrac        Cs    2.0     CC    1.5     CC    1.0     CC    0.9     CC    0.7     CC    0.6     CC    0.4   
+l1          CC    1.7     CC    1.5     CC    0.6     CC    0.4     CC    0.4     CC    0.3     CC    0.2   
+
+eta = 0.3, accel = 3 m/s2
+controller         V_f 0         V_f 2         V_f 4         V_f 6         V_f 8        V_f 10        V_f 12
+baseline    ss    2.1     CC    1.9     CC    1.7     CC    1.6     CC    1.3     CC    1.0     CC    0.7   
+oracle      ss    1.4     CC    1.0     CC    0.9     CC    0.8     CC    0.7     CC    0.6     CC    0.5   
+rls         ss    1.4     CC    1.0     CC    0.6     CC    0.8     CC    0.7     CC    0.6     CC    0.5   
+mrac        ss    1.6     CC    1.3     CC    1.0     CC    0.8     CC    0.7     CC    0.6     CC    0.4   
+l1          ss    1.3     CC    1.0     CC    0.5     CC    0.5     CC    0.4     CC    0.3     CC    0.2   
+
+eta = 0.0, accel = 1 m/s2
+controller         V_f 0         V_f 2         V_f 4         V_f 6         V_f 8        V_f 10        V_f 12
+baseline    LL    nan     LC   55.6     CC    2.6     CC    2.4     CC    2.2     CC    1.8     CC    1.5   
+oracle      LL    nan     LC   54.9     CC    1.9     CC    1.3     CC    1.1     CC    0.9     CC    0.7   
+rls         LL    nan     LC   54.9     CC    1.9     CC    1.7     CC    1.4     CC    1.1     CC    0.9   
+mrac        LL    nan     LC   58.5     CC    2.1     CC    1.4     CC    1.1     CC    0.8     CC    0.6   
+l1          LL    nan     LL    nan     CC    2.1     CC    1.0     CC    0.6     CC    0.5     CC    0.4   
+
+eta = 0.0, accel = 2 m/s2
+controller         V_f 0         V_f 2         V_f 4         V_f 6         V_f 8        V_f 10        V_f 12
+baseline    sL   16.8     sL    3.9     CC    2.6     CC    2.5     CC    2.2     CC    1.8     CC    1.5   
+oracle      sL   11.3     sL    3.1     CC    2.2     CC    1.4     CC    1.0     CC    0.9     CC    0.6   
+rls         sL   13.3     sL    3.1     CC    2.3     CC    1.5     CC    1.4     CC    1.1     CC    0.9   
+mrac        ss   30.0     ss   22.6     CC    2.3     CC    1.4     CC    1.0     CC    0.8     CC    0.6   
+l1          sL    8.4     ss    2.5     CC    2.2     CC    1.2     CC    0.6     CC    0.5     CC    0.4   
+
+eta = 0.0, accel = 3 m/s2
+controller         V_f 0         V_f 2         V_f 4         V_f 6         V_f 8        V_f 10        V_f 12
+baseline    sL   13.9     ss    3.6     Cs    2.5     CC    2.4     CC    2.2     CC    1.7     CC    1.4   
+oracle      ss   24.8     ss    2.0     Cs    1.8     CC    1.2     CC    1.0     CC    0.8     CC    0.7   
+rls         sL   10.9     ss    2.3     Cs    1.8     CC    1.4     CC    1.2     CC    1.1     CC    0.8   
+mrac        ss   28.7     ss    2.8     Cs    1.9     CC    1.3     CC    1.0     CC    0.8     CC    0.6   
+l1          sL    6.8     sC    1.7     Cs    1.5     CC    1.0     CC    0.6     CC    0.5     CC    0.4   
+
+Outrun: lowest fault speed V_f from which every faster V_f COMPLETES the transition (front rotor / rear rotor; '?' = missing/errored run),
+next to the SAME controller's Stage 3 constant-speed minimum safe airspeed (RECOVERED in the 4 s window). Criteria differ: completed also needs the final speed within 1 m/s and its window runs to
+the end of the transition (review m5, 28 Oct 2026: before, every controller was compared with the baseline's Stage 3 value).
+  eta = 0.3
+    Stage 3 const.:  baseline: 4/5,  oracle: 4/5,  rls: 4/5,  mrac: 4/5,  l1: 4/5
+    accel 1:       baseline: 2/2,  oracle: 2/2,  rls: 2/2,  mrac: 2/2,  l1: 2/2
+    accel 2:       baseline: 0/2,  oracle: 0/2,  rls: 0/2,  mrac: 0/2,  l1: 0/0
+    accel 3:       baseline: 2/2,  oracle: 2/2,  rls: 2/2,  mrac: 2/2,  l1: 2/2
+  eta = 0.0
+    Stage 3 const.:  baseline: 7/8,  oracle: 6/8,  rls: 6/8,  mrac: 6/8,  l1: 7/8
+    accel 1:       baseline: 4/2,  oracle: 4/2,  rls: 4/2,  mrac: 4/2,  l1: 4/4
+    accel 2:       baseline: 4/4,  oracle: 4/4,  rls: 4/4,  mrac: 4/4,  l1: 4/4
+    accel 3:       baseline: 4/6,  oracle: 4/6,  rls: 4/6,  mrac: 4/6,  l1: 4/6

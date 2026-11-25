@@ -1,0 +1,26 @@
+l1: coarse grid 48 candidates, 48 admissible
+   refine: +2 (total refine 2), best score 0.4937
+   refine: +2 (total refine 4), best score 0.4918
+   refine: +1 (total refine 5), best score 0.4912
+   refine: +2 (total refine 7), best score 0.4910
+   refine: +1 (total refine 8), best score 0.4910
+baseline on tuning set: mean upset 1.523 deg; limit for (b): 0.1718 deg
+l1: 56 candidates (8 refine), 56 pass the rule
+   {'a': 0.1, 'wc': 1280.0} upset 0.4910  healthy_dev 0.000  rms 0.1636
+   {'a': 0.3, 'wc': 1280.0} upset 0.4912  healthy_dev 0.000  rms 0.1636
+   {'a': 1.0, 'wc': 1280.0} upset 0.4918  healthy_dev 0.000  rms 0.1636
+   {'a': 3.0, 'wc': 1280.0} upset 0.4937  healthy_dev 0.000  rms 0.1636
+   {'a': 0.1, 'wc': 905.0} upset 0.4947  healthy_dev 0.000  rms 0.1636
+   {'a': 0.3, 'wc': 905.0} upset 0.4949  healthy_dev 0.000  rms 0.1636
+   {'a': 1.0, 'wc': 905.0} upset 0.4955  healthy_dev 0.000  rms 0.1636
+   {'a': 3.0, 'wc': 905.0} upset 0.4973  healthy_dev 0.000  rms 0.1636
+   {'a': 10.0, 'wc': 1280.0} upset 0.5002  healthy_dev 0.000  rms 0.1636
+   {'a': 3.0, 'wc': 640.0} upset 0.5034  healthy_dev 0.000  rms 0.1636
+WINNER: {'a': 0.1, 'wc': 1280.0}
+   a = 0.1: ladder end (bound), neighbours all evaluated
+   wc = 1280.0: ladder end (bound), neighbours all evaluated
+unconstrained best (rule (a) only, reported, not used): {'a': 0.1, 'wc': 1280.0} score 0.4910 healthy_dev 0.000
+
+real	3m37.435s
+user	6m49.795s
+sys	0m0.221s

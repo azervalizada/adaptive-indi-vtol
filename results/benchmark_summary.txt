@@ -1,0 +1,42 @@
+Fault-free check (5.0-7.5 s) [1 scenarios]
+
+controller      upset_deg  att_rms_deg   recovery_s    alt_dev_m     sat_frac  eta_err_end  healthy_dev  crashes  gap closed [95% CI]
+-------------------------------------------------------------------------------------------------------------------------------------
+baseline            0.219        0.164        0.000        0.001        0.000            -            -        0  -
+rls                 0.218        0.164        0.000        0.001        0.000        0.028        0.041        0  -
+mrac                0.219        0.164        0.000        0.001        0.000        0.002        0.016        0  -
+l1                  0.219        0.164        0.000        0.001        0.000            -            -        0  -
+oracle              0.219        0.164        0.000        0.001        0.000            -            -        0  -
+
+Gust check: healthy vehicle, 0.5 s step moment at 6.0 s (healthy_dev = false fault detection) [4 scenarios]
+
+controller      upset_deg  att_rms_deg   recovery_s    alt_dev_m     sat_frac  eta_err_end  healthy_dev  crashes  gap closed [95% CI]
+-------------------------------------------------------------------------------------------------------------------------------------
+baseline            0.784        0.244        0.190        0.001        0.000            -            -        0  -
+rls                 0.556        0.172        0.000        0.002        0.001        0.133        0.801        0  -
+mrac                0.775        0.243        0.190        0.001        0.000        0.013        0.156        0  -
+l1                  0.337        0.118        0.000        0.001        0.000            -            -        0  -
+oracle              0.784        0.244        0.190        0.001        0.000            -            -        0  -
+
+Grid: 4 rotors x eta {0.8, 0.65, 0.5} x {abrupt, 1 s ramp}, fault at 6.0 s [24 scenarios]
+
+controller      upset_deg  att_rms_deg   recovery_s    alt_dev_m     sat_frac  eta_err_end  healthy_dev  crashes  gap closed [95% CI]
+-------------------------------------------------------------------------------------------------------------------------------------
+baseline            1.597        0.426        0.235        0.015        0.002            -            -        0     0%  [0, 0]
+rls                 0.687        0.191        0.039        0.006        0.007        0.140        0.038        0   153%  [132, 183]
+mrac                1.080        0.296        0.074        0.011        0.005        0.098        0.016        0    87%  [84, 91]
+l1                  0.499        0.145        0.022        0.015        0.001            -            -        0   183%  [171, 206]
+oracle              1.002        0.277        0.067        0.010        0.003            -            -        0   100%  [100, 100]
+
+Monte Carlo: random fault + model mismatch + noise seed [100 scenarios]
+
+controller      upset_deg  att_rms_deg   recovery_s    alt_dev_m     sat_frac  eta_err_end  healthy_dev  crashes  gap closed [95% CI]
+-------------------------------------------------------------------------------------------------------------------------------------
+baseline            1.265        0.342        0.091        0.011        0.000            -            -        0     0%  [0, 0]
+rls                 0.511        0.161        0.014        0.004        0.005        0.123        0.142        0   183%  [170, 199]
+mrac                0.894        0.253        0.062        0.008        0.002        0.101        0.040        0    92%  [89, 94]
+l1                  0.439        0.145        0.008        0.011        0.000            -            -        0   200%  [189, 212]
+oracle              0.859        0.244        0.058        0.008        0.000            -            -        0   100%  [100, 100]
+
+
+645 simulations in 719 s

@@ -1,0 +1,7 @@
+mrac_noaero: coarse grid 48 candidates, 0 admissible
+mrac_noaero: 48 candidates (0 refine), 0 pass the rule (limit for (b): 0.0130 deg)
+unconstrained best (rule (a) only, reported, not used): {'a': 30.0, 'gamma_eta': 64.0, 'gamma_d': 30.0, 'gamma_thrust': 0.03} score 0.5375 healthy_dev 1.000
+
+real	7m14.755s
+user	14m12.527s
+sys	0m0.118s

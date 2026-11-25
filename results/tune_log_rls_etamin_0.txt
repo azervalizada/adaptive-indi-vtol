@@ -1,0 +1,23 @@
+rls: coarse grid 48 candidates, 24 admissible
+   refine: +7 (total refine 7), best score 0.5144
+rls: 55 candidates (7 refine), 28 pass the rule (limit for (b): 0.0130 deg)
+   {'lag': 1, 'threshold': 0.05, 'forget': 0.995, 'p0': 0.01} score 0.5144  healthy_dev 0.101  rms 0.0029
+   {'lag': 1, 'threshold': 0.05, 'forget': 0.998, 'p0': 0.01} score 0.5145  healthy_dev 0.098  rms 0.0029
+   {'lag': 1, 'threshold': 0.05, 'forget': 0.99, 'p0': 0.01} score 0.5389  healthy_dev 0.109  rms 0.0029
+   {'lag': 1, 'threshold': 0.05, 'forget': 0.98, 'p0': 0.01} score 0.5427  healthy_dev 0.122  rms 0.0029
+   {'lag': 1, 'threshold': 0.05, 'forget': 0.995, 'p0': 0.003} score 0.5517  healthy_dev 0.046  rms 0.0029
+   {'lag': 10, 'threshold': 0.2, 'forget': 0.995, 'p0': 0.01} score 0.5740  healthy_dev 0.077  rms 0.0029
+   {'lag': 10, 'threshold': 0.2, 'forget': 0.98, 'p0': 0.01} score 0.5800  healthy_dev 0.083  rms 0.0029
+   {'lag': 5, 'threshold': 0.2, 'forget': 0.98, 'p0': 0.01} score 0.6169  healthy_dev 0.000  rms 0.0029
+   {'lag': 5, 'threshold': 0.2, 'forget': 0.995, 'p0': 0.01} score 0.6191  healthy_dev 0.000  rms 0.0029
+   {'lag': 1, 'threshold': 0.1, 'forget': 0.995, 'p0': 0.01} score 0.6790  healthy_dev 0.000  rms 0.0029
+WINNER: {'lag': 1, 'threshold': 0.05, 'forget': 0.995, 'p0': 0.01}
+   lag = 1: ladder end (bound), neighbours all evaluated
+   threshold = 0.05: interior, neighbours all evaluated
+   forget = 0.995: interior, neighbours all evaluated
+   p0 = 0.01: interior, neighbours all evaluated
+unconstrained best (rule (a) only, reported, not used): {'lag': 1, 'threshold': 0.05, 'forget': 0.995, 'p0': 0.01} score 0.5144 healthy_dev 0.101
+
+real	9m27.205s
+user	18m9.880s
+sys	0m0.371s

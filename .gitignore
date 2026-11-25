@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+.pytest_cache/
+
+# LaTeX build files
+docs/src/*.aux
+docs/src/*.log
+docs/src/*.out
+docs/src/*.toc
+docs/src/*.pdf
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.blg
+paper/*.fls
+paper/*.fdb_latexmk
+results/logs/
+results/seed_repeat_parts/

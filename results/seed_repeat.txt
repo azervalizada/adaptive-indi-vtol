@@ -1,0 +1,16 @@
+Gap closed [95 % CI] and losses per noise seed (seed 0 = main results)
+
+Grid
+  baseline  seed 0: lost 2   |   seed 1: lost 2   |   seed 2: lost 2
+  oracle    seed 0: lost 2   |   seed 1: lost 2   |   seed 2: lost 2
+  rls       seed 0:  106% [100, 114] lost 2   |   seed 1:  107% [101, 114] lost 2   |   seed 2:  114% [107, 120] lost 1
+  mrac      seed 0:   63% [45, 81] lost 2   |   seed 1:   62% [45, 78] lost 2   |   seed 2:   63% [46, 81] lost 2
+  l1        seed 0:  145% [139, 153] lost 6   |   seed 1:  147% [141, 155] lost 6   |   seed 2:  147% [141, 155] lost 6
+
+Transition grid
+  baseline  seed 0: lost 7   |   seed 1: lost 7   |   seed 2: lost 7
+  oracle    seed 0: lost 7   |   seed 1: lost 7   |   seed 2: lost 7
+  rls       seed 0:   86% [80, 93] lost 8   |   seed 1:   87% [82, 94] lost 8   |   seed 2:   83% [78, 89] lost 8
+  mrac      seed 0:   78% [64, 91] lost 4   |   seed 1:   78% [63, 91] lost 4   |   seed 2:   78% [64, 91] lost 4
+  l1        seed 0:  134% [127, 141] lost 8   |   seed 1:  133% [126, 138] lost 8   |   seed 2:  133% [126, 140] lost 8
+

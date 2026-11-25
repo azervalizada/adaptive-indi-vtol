@@ -1,0 +1,42 @@
+Grid, noise x2 [72 scenarios, 57 survived by all]
+
+controller  lost  recov  tilt_peak_deg  tilt_final_de  heading_final      alt_dev_m  rotor_sat_fra  surf_sat_frac    healthy_dev    eta_err_end   hd_max   gap closed [95% CI] (own set)   | common set
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+baseline       2     54          1.258          0.029          1.832          0.028          0.211          0.199              -              -        -   -
+oracle         2     55          0.645          0.024          1.812          0.015          0.102          0.202              -              -        -   -
+rls            2     55          0.789          0.026          1.790          0.010          0.211          0.203          0.324          0.121    0.354      89%  [82, 97] (n=65)   |    77%  [69, 85] (n=52)
+mrac           2     56          0.672          0.027          1.814          0.018          0.131          0.200          0.025          0.160    0.033      63%  [46, 81] (n=65)   |    96%  [92, 99] (n=52)
+l1             6     54          0.331          0.030          1.731          0.036          0.677          0.315              -              -        -     147%  [140, 154] (n=61)   |   149%  [142, 158] (n=52)
+rls_eta0      15     42          5.260          1.231          8.817          1.044          0.003          0.241          0.400          0.528    0.425    -658%  [-1121, -263] (n=52)   |  -658%  [-1121, -263] (n=52)
+
+Grid by airspeed: mean tilt_peak_deg over the scenarios at that speed survived by ALL controllers (n); L = lost of the runs at that speed
+
+controller     0 m/s (n=1)     4 m/s (n=8)    6 m/s (n=12)    8 m/s (n=12)   10 m/s (n=12)   12 m/s (n=12)
+baseline         1.14 L2         1.32            1.61            1.40            1.12            0.88     
+oracle           0.65 L2         0.70            0.81            0.70            0.58            0.45     
+rls              0.29 L2         0.53            1.05            0.94            0.78            0.60     
+mrac             0.75 L2         0.79            0.90            0.70            0.55            0.44     
+l1               0.30 L4         0.34 L2         0.46            0.34            0.29            0.23     
+rls_eta0         0.78 L11       20.37 L4         9.30            0.77            0.69            0.58     
+
+Grid, motor 50 % slower than modelled [72 scenarios, 66 survived by all]
+
+controller  lost  recov  tilt_peak_deg  tilt_final_de  heading_final      alt_dev_m  rotor_sat_fra  surf_sat_frac    healthy_dev    eta_err_end   hd_max   gap closed [95% CI] (own set)   | common set
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+baseline       2     54          1.551          0.231         11.082          0.037          0.276          0.234              -              -        -   -
+oracle         2     55          0.753          0.067         10.992          0.022          0.145          0.232              -              -        -   -
+rls            2     55          0.710          0.069         10.878          0.018          0.266          0.231          0.000          0.137    0.000      97%  [88, 107] (n=66)   |   105%  [100, 112] (n=62)
+mrac           2     56          0.946          0.246         11.212          0.026          0.159          0.233          0.013          0.200    0.016      61%  [40, 78] (n=66)   |    76%  [60, 90] (n=62)
+l1             6     54          0.420          0.059         11.714          0.081          0.507          0.325              -              -        -     140%  [133, 148] (n=62)   |   140%  [133, 148] (n=62)
+rls_eta0       2     55          0.898          0.093         10.412          0.075          0.237          0.248          0.000          0.140    0.000      86%  [69, 97] (n=66)   |    82%  [63, 95] (n=62)
+
+Grid by airspeed: mean tilt_peak_deg over the scenarios at that speed survived by ALL controllers (n); L = lost of the runs at that speed
+
+controller     0 m/s (n=8)    4 m/s (n=10)    6 m/s (n=12)    8 m/s (n=12)   10 m/s (n=12)   12 m/s (n=12)
+baseline         2.38 L2         1.85            1.79            1.51            1.17            0.94     
+oracle           1.21 L2         0.96            0.85            0.70            0.56            0.43     
+rls              1.09 L2         0.72            0.87            0.72            0.55            0.44     
+mrac             2.38 L2         1.21            0.96            0.70            0.53            0.42     
+l1               0.59 L4         0.53 L2         0.52            0.39            0.32            0.25     
+rls_eta0         1.54 L2         1.02            1.28            0.77            0.56            0.45     
+

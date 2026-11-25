@@ -1,0 +1,23 @@
+Static minimum airspeed [m/s] for steady level flight after a rotor fault (0.5 m/s grid);
+bank |phi| <= 29 deg, actuators within limits, level flight path. Rotor 1, 4 front; 2, 3 rear.
+
+pitch 0, |sideslip| <= 5 deg  (controller's pitch reference + 'recovered' heading criterion)
+  eta 0.30:  rotor 1: 4.0,  rotor 2: 5.0,  rotor 3: 5.0,  rotor 4: 4.0
+  eta 0.15:  rotor 1: 5.5,  rotor 2: 6.5,  rotor 3: 6.5,  rotor 4: 5.5
+  eta 0.00:  rotor 1: 6.0,  rotor 2: 8.0,  rotor 3: 8.0,  rotor 4: 6.0
+
+pitch 0, |sideslip| <= 20 deg (heading allowed to drift)
+  eta 0.30:  rotor 1: 3.0,  rotor 2: 4.0,  rotor 3: 4.0,  rotor 4: 3.0
+  eta 0.15:  rotor 1: 4.0,  rotor 2: 5.5,  rotor 3: 5.5,  rotor 4: 4.0
+  eta 0.00:  rotor 1: 5.0,  rotor 2: 6.5,  rotor 3: 6.5,  rotor 4: 5.0
+
+pitch free (-11..17 deg), |sideslip| <= 20 deg
+  eta 0.30:  rotor 1: 3.0,  rotor 2: 2.5,  rotor 3: 2.5,  rotor 4: 3.0
+  eta 0.15:  rotor 1: 4.0,  rotor 2: 3.5,  rotor 3: 3.5,  rotor 4: 4.0
+  eta 0.00:  rotor 1: 4.5,  rotor 2: 4.0,  rotor 3: 4.5,  rotor 4: 4.5
+
+|pitch| <= 1 deg, |sideslip| <= 5 deg (the 1 deg attitude tolerance of 'recovered')
+  eta 0.30:  rotor 1: 4.0,  rotor 2: 5.0,  rotor 3: 5.0,  rotor 4: 4.0
+  eta 0.15:  rotor 1: 5.0,  rotor 2: 6.5,  rotor 3: 6.5,  rotor 4: 5.0
+  eta 0.00:  rotor 1: 6.0,  rotor 2: 7.5,  rotor 3: 7.5,  rotor 4: 6.0
+

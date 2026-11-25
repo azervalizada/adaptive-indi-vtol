@@ -1,0 +1,33 @@
+Linear one-axis analysis (analysis/delay_margin.py). Delay margin = largest pure delay with all closed-loop
+eigenvalues inside the unit circle (2 ms steps); crossover / phase margin from the loop broken at the actuator command.
+
+Quadrotor roll axis (k_rate 25, k_att 8)
+  baseline          crossover  3.85 Hz  phase margin  44.2 deg  PM/omega_c  31.8 ms  eigenvalue margin  30.0 ms
+  L1 a=0.1 wc=1280  crossover  7.97 Hz  phase margin  54.2 deg  PM/omega_c  18.9 ms  eigenvalue margin  18.0 ms
+  L1 a=10 wc=1280   crossover  7.87 Hz  phase margin  54.7 deg  PM/omega_c  19.3 ms  eigenvalue margin  18.0 ms
+  L1 a=10 wc=320    crossover  7.57 Hz  phase margin  50.1 deg  PM/omega_c  18.4 ms  eigenvalue margin  18.0 ms
+  L1 a=30 wc=320    crossover  7.47 Hz  phase margin  51.4 deg  PM/omega_c  19.1 ms  eigenvalue margin  18.0 ms
+  L1 a=100 wc=320   crossover  7.19 Hz  phase margin  55.6 deg  PM/omega_c  21.5 ms  eigenvalue margin  20.0 ms
+  L1 a=300 wc=320   crossover  6.07 Hz  phase margin  63.1 deg  PM/omega_c  28.9 ms  eigenvalue margin  28.0 ms
+  L1 a=10 wc=40     crossover  5.62 Hz  phase margin  35.8 deg  PM/omega_c  17.7 ms  eigenvalue margin  16.0 ms
+  L1 a=300 wc=40    crossover  5.26 Hz  phase margin  45.6 deg  PM/omega_c  24.1 ms  eigenvalue margin  22.0 ms
+  L1 a=30 wc=640    crossover  7.67 Hz  phase margin  54.5 deg  PM/omega_c  19.7 ms  eigenvalue margin  18.0 ms
+  L1 a=30 wc=1280   crossover  7.77 Hz  phase margin  56.0 deg  PM/omega_c  20.0 ms  eigenvalue margin  18.0 ms
+  L1 a=100 wc=1280  crossover  7.38 Hz  phase margin  60.1 deg  PM/omega_c  22.6 ms  eigenvalue margin  22.0 ms
+  L1 a=300 wc=1280  crossover  6.07 Hz  phase margin  66.6 deg  PM/omega_c  30.5 ms  eigenvalue margin  30.0 ms
+
+Quadplane roll axis IN HOVER (k_rate 20, k_att 6; no surfaces, aerodynamic damping or servo model: valid only in hover, review m7)
+  baseline          crossover  3.13 Hz  phase margin  50.3 deg  PM/omega_c  44.6 ms  eigenvalue margin  44.0 ms
+  L1 a=0.1 wc=1280  crossover  7.87 Hz  phase margin  59.5 deg  PM/omega_c  21.0 ms  eigenvalue margin  20.0 ms
+  L1 a=10 wc=1280   crossover  7.77 Hz  phase margin  60.2 deg  PM/omega_c  21.5 ms  eigenvalue margin  20.0 ms
+  L1 a=10 wc=320    crossover  7.38 Hz  phase margin  55.4 deg  PM/omega_c  20.9 ms  eigenvalue margin  20.0 ms
+  L1 a=30 wc=320    crossover  7.28 Hz  phase margin  56.8 deg  PM/omega_c  21.7 ms  eigenvalue margin  20.0 ms
+  L1 a=100 wc=320   crossover  6.91 Hz  phase margin  61.6 deg  PM/omega_c  24.7 ms  eigenvalue margin  24.0 ms
+  L1 a=300 wc=320   crossover  5.69 Hz  phase margin  71.0 deg  PM/omega_c  34.7 ms  eigenvalue margin  34.0 ms
+  L1 a=10 wc=40     crossover  5.26 Hz  phase margin  40.9 deg  PM/omega_c  21.6 ms  eigenvalue margin  20.0 ms
+  L1 a=300 wc=40    crossover  4.80 Hz  phase margin  52.3 deg  PM/omega_c  30.2 ms  eigenvalue margin  30.0 ms
+  L1 a=30 wc=640    crossover  7.57 Hz  phase margin  60.1 deg  PM/omega_c  22.1 ms  eigenvalue margin  22.0 ms
+  L1 a=30 wc=1280   crossover  7.67 Hz  phase margin  61.7 deg  PM/omega_c  22.3 ms  eigenvalue margin  22.0 ms
+  L1 a=100 wc=1280  crossover  7.19 Hz  phase margin  66.3 deg  PM/omega_c  25.6 ms  eigenvalue margin  24.0 ms
+  L1 a=300 wc=1280  crossover  5.69 Hz  phase margin  74.8 deg  PM/omega_c  36.5 ms  eigenvalue margin  36.0 ms
+

@@ -1,0 +1,22 @@
+l1: coarse grid 48 candidates, 48 admissible
+   refine: +1 (total refine 1), best score 0.2415
+   refine: +2 (total refine 3), best score 0.2415
+l1: 51 candidates (3 refine), 51 pass the rule (limit for (b): 0.0130 deg)
+   {'a': 30.0, 'wc': 1280.0} score 0.2415  healthy_dev 0.000  rms 0.0046
+   {'a': 30.0, 'wc': 905.0} score 0.2472  healthy_dev 0.000  rms 0.0055
+   {'a': 10.0, 'wc': 1280.0} score 0.2475  healthy_dev 0.000  rms 0.0046
+   {'a': 10.0, 'wc': 905.0} score 0.2552  healthy_dev 0.000  rms 0.0052
+   {'a': 100.0, 'wc': 1280.0} score 0.2617  healthy_dev 0.000  rms 0.0057
+   {'a': 30.0, 'wc': 640.0} score 0.2660  healthy_dev 0.000  rms 0.0059
+   {'a': 100.0, 'wc': 905.0} score 0.2708  healthy_dev 0.000  rms 0.0048
+   {'a': 10.0, 'wc': 640.0} score 0.2729  healthy_dev 0.000  rms 0.0062
+   {'a': 30.0, 'wc': 453.0} score 0.2795  healthy_dev 0.000  rms 0.0047
+   {'a': 10.0, 'wc': 453.0} score 0.2909  healthy_dev 0.000  rms 0.0048
+WINNER: {'a': 30.0, 'wc': 1280.0}
+   a = 30.0: interior, neighbours all evaluated
+   wc = 1280.0: ladder end (bound), neighbours all evaluated
+unconstrained best (rule (a) only, reported, not used): {'a': 30.0, 'wc': 1280.0} score 0.2415 healthy_dev 0.000
+
+real	8m8.293s
+user	15m33.747s
+sys	0m0.193s

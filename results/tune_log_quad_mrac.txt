@@ -1,0 +1,27 @@
+mrac: coarse grid 48 candidates, 36 admissible
+   refine: +4 (total refine 4), best score 1.0308
+   refine: +6 (total refine 10), best score 1.0224
+   refine: +6 (total refine 16), best score 1.0180
+   refine: +6 (total refine 22), best score 1.0180
+baseline on tuning set: mean upset 1.523 deg; limit for (b): 0.1718 deg
+mrac: 70 candidates (22 refine), 50 pass the rule
+   {'a': 10.0, 'gamma_eta': 1.0, 'gamma_d': 0.0, 'gamma_thrust': 20.0} upset 1.0180  healthy_dev 0.018  rms 0.1637
+   {'a': 10.0, 'gamma_eta': 1.0, 'gamma_d': 3.0, 'gamma_thrust': 20.0} upset 1.0186  healthy_dev 0.017  rms 0.1637
+   {'a': 10.0, 'gamma_eta': 1.0, 'gamma_d': 0.0, 'gamma_thrust': 10.0} upset 1.0224  healthy_dev 0.017  rms 0.1637
+   {'a': 10.0, 'gamma_eta': 1.0, 'gamma_d': 3.0, 'gamma_thrust': 10.0} upset 1.0231  healthy_dev 0.017  rms 0.1637
+   {'a': 10.0, 'gamma_eta': 1.0, 'gamma_d': 0.0, 'gamma_thrust': 5.0} upset 1.0308  healthy_dev 0.016  rms 0.1637
+   {'a': 10.0, 'gamma_eta': 1.0, 'gamma_d': 3.0, 'gamma_thrust': 5.0} upset 1.0314  healthy_dev 0.016  rms 0.1637
+   {'a': 10.0, 'gamma_eta': 1.0, 'gamma_d': 0.0, 'gamma_thrust': 2.0} upset 1.0480  healthy_dev 0.016  rms 0.1637
+   {'a': 10.0, 'gamma_eta': 1.0, 'gamma_d': 3.0, 'gamma_thrust': 2.0} upset 1.0486  healthy_dev 0.016  rms 0.1637
+   {'a': 10.0, 'gamma_eta': 1.0, 'gamma_d': 30.0, 'gamma_thrust': 2.0} upset 1.0527  healthy_dev 0.019  rms 0.1637
+   {'a': 30.0, 'gamma_eta': 1.0, 'gamma_d': 0.0, 'gamma_thrust': 20.0} upset 1.0575  healthy_dev 0.005  rms 0.1637
+WINNER: {'a': 10.0, 'gamma_eta': 1.0, 'gamma_d': 0.0, 'gamma_thrust': 20.0}
+   a = 10.0: interior, neighbours all evaluated
+   gamma_eta = 1.0: interior, neighbours all evaluated
+   gamma_d = 0.0: ladder end (bound), neighbours all evaluated
+   gamma_thrust = 20.0: interior, neighbours all evaluated
+unconstrained best (rule (a) only, reported, not used): {'a': 30.0, 'gamma_eta': 10.0, 'gamma_d': 30.0, 'gamma_thrust': 2.0} score 0.6129 healthy_dev 0.900
+
+real	4m49.113s
+user	9m19.530s
+sys	0m0.351s

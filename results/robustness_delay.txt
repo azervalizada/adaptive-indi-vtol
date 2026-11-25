@@ -1,0 +1,14 @@
+Unmodelled motor-command delay. Cell = mean upset_deg over 4 scenarios;
+'~' = fault-free attitude RMS > 0.5 deg (oscillating), LOST = loss of control
+(diverged or attitude error > 90 deg). Margin = largest delay before the first ~ or LOST.
+
+controller         0 ms     5 ms    10 ms    15 ms    18 ms    20 ms    22 ms    25 ms    30 ms   margin
+baseline          2.04     2.38     2.75     3.16     3.43     3.62     3.81     4.11     5.08~   25 ms
+rls               1.02     1.75     2.59     3.15     3.93     4.49     4.40     5.19     6.29~   25 ms
+mrac              1.45     1.77     2.13     2.52     2.77     2.95     3.13     3.42     4.37~   25 ms
+l1                0.68     0.79     0.94     1.16     1.36     4.47~    8.45~     LOST     LOST   18 ms
+oracle            1.36     1.64     1.96     2.33     2.57     2.74     2.91     3.19     4.12~   25 ms
+l1_a10            0.68     0.79     0.93     1.15     1.33     3.67~    6.57~     LOST     LOST   18 ms
+l1_a100           0.79     0.92     1.07     1.27     1.41     1.52     1.67     5.65~   14.99~   22 ms
+l1_a300           1.09     1.25     1.44     1.65     1.80     1.91     2.03     2.23     2.73~   25 ms
+l1_wc320          0.73     0.85     1.02     1.27     1.70     5.79~     LOST     LOST     LOST   18 ms

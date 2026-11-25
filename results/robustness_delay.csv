@@ -1,0 +1,325 @@
+controller,delay_ms,scenario,upset_deg,att_rms_deg,sat_frac,crashed
+baseline,0,nominal: no fault,0.2187658592661674,0.1639356795339891,0.0,False
+baseline,0,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s",1.2477260757588924,0.3346508206427908,0.0,False
+baseline,0,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s",2.197550334032029,0.47087914198707576,0.0,False
+baseline,0,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s",4.497999071474072,1.0222264325063852,0.0136,False
+baseline,5,"nominal: no fault, +5 ms delay",0.21838061276474124,0.16387769756522358,0.0,False
+baseline,5,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +5 ms delay",1.4673402604426191,0.38129887218516423,0.0,False
+baseline,5,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +5 ms delay",2.6195087866838076,0.5536206445775155,0.0,False
+baseline,5,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +5 ms delay",5.210706361948565,1.1940892844930926,0.024,False
+baseline,10,"nominal: no fault, +10 ms delay",0.2180121338155056,0.16381892709376708,0.0,False
+baseline,10,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +10 ms delay",1.723304042393157,0.4358628880915104,0.0,False
+baseline,10,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +10 ms delay",3.0897323768276705,0.6480399434109391,0.0,False
+baseline,10,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +10 ms delay",5.986071511002538,1.3835229217990175,0.0312,False
+baseline,15,"nominal: no fault, +15 ms delay",0.21766344169482704,0.16375810913562425,0.0,False
+baseline,15,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +15 ms delay",2.014608417574862,0.5015893069301305,0.0,False
+baseline,15,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +15 ms delay",3.6063194135037633,0.7578281720336476,0.0,False
+baseline,15,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +15 ms delay",6.818823283823728,1.5863099536790142,0.0376,False
+baseline,18,"nominal: no fault, +18 ms delay",0.21722347808030237,0.1637174786727396,0.0,False
+baseline,18,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +18 ms delay",2.2077799838067413,0.5494625362692033,0.0,False
+baseline,18,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +18 ms delay",3.943154174022498,0.8365303990666708,0.0,False
+baseline,18,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +18 ms delay",7.354339791030747,1.7159647294823184,0.04,False
+baseline,20,"nominal: no fault, +20 ms delay",0.21663908563401035,0.16368883327314562,0.0,False
+baseline,20,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +20 ms delay",2.343742404606036,0.5854435288264764,0.0,False
+baseline,20,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +20 ms delay",4.177564082837887,0.8962019052291301,0.0,False
+baseline,20,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +20 ms delay",7.723922648807527,1.8046088778056142,0.0424,False
+baseline,22,"nominal: no fault, +22 ms delay",0.21646506331367274,0.16366870969975764,0.0,False
+baseline,22,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +22 ms delay",2.4856447218177493,0.6253113568784251,0.0,False
+baseline,22,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +22 ms delay",4.420405037180881,0.964408269394079,0.0,False
+baseline,22,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +22 ms delay",8.105185996734692,1.895594730733534,0.0448,False
+baseline,25,"nominal: no fault, +25 ms delay",0.22002925197287648,0.1640822872424059,0.0,False
+baseline,25,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +25 ms delay",2.7088473924055547,0.6940092859189326,0.0,False
+baseline,25,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +25 ms delay",4.799879119787292,1.0909327902297181,0.0,False
+baseline,25,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +25 ms delay",8.697388296995827,2.036235011013685,0.0472,False
+baseline,30,"nominal: no fault, +30 ms delay",1.5876592856712262,0.6134554900080273,0.0,False
+baseline,30,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +30 ms delay",3.26187909562364,1.0132053877034026,0.0,False
+baseline,30,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +30 ms delay",5.4282946948604796,1.4320714704706095,0.0,False
+baseline,30,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +30 ms delay",10.022965689901849,2.3391366809014653,0.0536,False
+rls,0,nominal: no fault,0.21811842148078128,0.1639431329279304,0.0,False
+rls,0,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s",0.7240332096275766,0.19831667603277361,0.0016,False
+rls,0,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s",0.6454281770582055,0.13045890452975029,0.0112,False
+rls,0,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s",2.498162922897303,0.5675108314473393,0.0272,False
+rls,5,"nominal: no fault, +5 ms delay",0.21747258507700698,0.16386752382772662,0.0,False
+rls,5,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +5 ms delay",2.0503980859656266,0.47367140710041794,0.0056,False
+rls,5,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +5 ms delay",1.1204218905196828,0.18654518289617075,0.0128,False
+rls,5,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +5 ms delay",3.5928912689163637,0.7844833337607705,0.0328,False
+rls,10,"nominal: no fault, +10 ms delay",0.21760795700427807,0.1638485298694386,0.0,False
+rls,10,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +10 ms delay",3.85485231840375,0.8759681714043828,0.0112,False
+rls,10,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +10 ms delay",1.699388159078471,0.3253801214602332,0.0144,False
+rls,10,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +10 ms delay",4.5854122378354125,0.9834778987353671,0.0384,False
+rls,15,"nominal: no fault, +15 ms delay",0.2166123650672984,0.1637162298360028,0.0,False
+rls,15,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +15 ms delay",4.400191595724772,1.166012257174334,0.0184,False
+rls,15,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +15 ms delay",2.2844703212192945,0.39662140321529765,0.0152,False
+rls,15,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +15 ms delay",5.71760713790476,1.251156341559126,0.0464,False
+rls,18,"nominal: no fault, +18 ms delay",0.21563849632211926,0.16370804797893318,0.0,False
+rls,18,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +18 ms delay",6.397613817920839,1.2044097469790367,0.0096,False
+rls,18,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +18 ms delay",2.716209390902528,0.4999673582873173,0.016,False
+rls,18,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +18 ms delay",6.407304701625145,1.3932460708281993,0.048,False
+rls,20,"nominal: no fault, +20 ms delay",0.21684531126953338,0.16385483387820246,0.0,False
+rls,20,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +20 ms delay",7.906781721702856,1.4886804121424517,0.0104,False
+rls,20,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +20 ms delay",3.037086113226097,0.618863039895762,0.016,False
+rls,20,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +20 ms delay",6.8127561168608315,1.4821841309449963,0.048,False
+rls,22,"nominal: no fault, +22 ms delay",0.2149608170928881,0.16355732098049083,0.0,False
+rls,22,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +22 ms delay",8.804660896733438,2.015096866006724,0.0152,False
+rls,22,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +22 ms delay",3.1812166942204105,0.6432362210610504,0.0168,False
+rls,22,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +22 ms delay",5.400699698042314,1.1511424900547387,0.0408,False
+rls,25,"nominal: no fault, +25 ms delay",0.2227857285747789,0.16409415766993496,0.0,False
+rls,25,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +25 ms delay",8.643771132163709,1.7913106258119562,0.0088,False
+rls,25,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +25 ms delay",3.6747654119092923,0.8585045726897931,0.0168,False
+rls,25,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +25 ms delay",8.209661789504809,1.8619388375997716,0.056,False
+rls,30,"nominal: no fault, +30 ms delay",1.581648943194891,0.6374345812149947,0.0,False
+rls,30,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +30 ms delay",8.069716744154187,2.6621251438269877,0.0088,False
+rls,30,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +30 ms delay",3.6479244279125718,1.4620341870578908,0.0216,False
+rls,30,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +30 ms delay",11.870575434154892,3.084849424225705,0.0872,False
+mrac,0,nominal: no fault,0.21906748562656528,0.16407009245570608,0.0,False
+mrac,0,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s",1.236755939397927,0.3325170420296253,0.0,False
+mrac,0,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s",1.4422350497475287,0.2959073674796383,0.0,False
+mrac,0,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s",2.921171259680005,0.6318865805038738,0.0208,False
+mrac,5,"nominal: no fault, +5 ms delay",0.2185810948965084,0.16400090573479867,0.0,False
+mrac,5,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +5 ms delay",1.4518998830449048,0.3781199567015519,0.0,False
+mrac,5,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +5 ms delay",1.7925972991217733,0.3582192862009449,0.0,False
+mrac,5,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +5 ms delay",3.613867248869433,0.8196351462414396,0.1184,False
+mrac,10,"nominal: no fault, +10 ms delay",0.21809008440804098,0.1639254367271941,0.0,False
+mrac,10,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +10 ms delay",1.7031535571782561,0.43145800598677597,0.0,False
+mrac,10,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +10 ms delay",2.196782565901064,0.7709396846398868,0.048,False
+mrac,10,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +10 ms delay",4.3867698859002235,0.9956403986075002,0.1232,False
+mrac,15,"nominal: no fault, +15 ms delay",0.2176185691945738,0.16383941404825553,0.0,False
+mrac,15,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +15 ms delay",1.9905572381215755,0.49605128108723645,0.0,False
+mrac,15,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +15 ms delay",2.6477021738782356,1.008571796578647,0.1312,False
+mrac,15,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +15 ms delay",5.220472282474663,1.206396043342775,0.1672,False
+mrac,18,"nominal: no fault, +18 ms delay",0.21712513407487746,0.16378793340987982,0.0,False
+mrac,18,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +18 ms delay",2.1818252670871185,0.5436289612729241,0.0,False
+mrac,18,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +18 ms delay",2.9445598672906144,0.8325895299720162,0.1072,False
+mrac,18,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +18 ms delay",5.7527911228480075,1.3258930195100556,0.1744,False
+mrac,20,"nominal: no fault, +20 ms delay",0.216517374426176,0.16375025802103219,0.0,False
+mrac,20,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +20 ms delay",2.31636617055843,0.5797407182064725,0.0,False
+mrac,20,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +20 ms delay",3.1508026169507306,1.0451821593349018,0.0976,False
+mrac,20,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +20 ms delay",6.120358176164876,1.406935791629831,0.1728,False
+mrac,22,"nominal: no fault, +22 ms delay",0.2166221328920279,0.1637186351233709,0.0,False
+mrac,22,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +22 ms delay",2.456851718513113,0.6200898236541188,0.0,False
+mrac,22,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +22 ms delay",3.3650011297389475,1.204547904823153,0.0904,False
+mrac,22,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +22 ms delay",6.498844276207143,1.4895028814735043,0.1712,False
+mrac,25,"nominal: no fault, +25 ms delay",0.21831591828347546,0.16409241347587178,0.0,False
+mrac,25,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +25 ms delay",2.679099898725149,0.690038005721181,0.0,False
+mrac,25,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +25 ms delay",3.6971200743995225,1.1983267998253564,0.0688,False
+mrac,25,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +25 ms delay",7.086048862055933,1.6227102899768664,0.1736,False
+mrac,30,"nominal: no fault, +30 ms delay",1.487613900126026,0.5926136562943684,0.0,False
+mrac,30,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +30 ms delay",3.3318172189070103,0.9881812030165881,0.0,False
+mrac,30,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +30 ms delay",4.104590519039084,1.262564610314705,0.0632,False
+mrac,30,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +30 ms delay",8.574031908394351,2.0345936688679185,0.1856,False
+l1,0,nominal: no fault,0.21913505344879697,0.16394022838183106,0.0,False
+l1,0,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s",0.4982990976552933,0.12851827607599595,0.0,False
+l1,0,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s",0.6328426755999426,0.16289343898825284,0.0,False
+l1,0,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s",1.3839729996350594,0.2711276712376554,0.0056,False
+l1,5,"nominal: no fault, +5 ms delay",0.2190373417514064,0.16395149289039104,0.0,False
+l1,5,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +5 ms delay",0.56952934316916,0.13717258815377043,0.0,False
+l1,5,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +5 ms delay",0.7532575128161549,0.18315523032849382,0.0,False
+l1,5,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +5 ms delay",1.616901409846023,0.3201578454903385,0.016,False
+l1,10,"nominal: no fault, +10 ms delay",0.21913920838357231,0.16396546430701928,0.0,False
+l1,10,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +10 ms delay",0.67348874983893,0.14991651928180258,0.0,False
+l1,10,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +10 ms delay",0.9361698640824018,0.2126595065697213,0.0,False
+l1,10,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +10 ms delay",1.913215106581117,0.38872931650649106,0.0264,False
+l1,15,"nominal: no fault, +15 ms delay",0.22012254815147506,0.16399769662783562,0.0,False
+l1,15,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +15 ms delay",0.8225882623965333,0.17667645045669986,0.0,False
+l1,15,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +15 ms delay",1.2772239398343932,0.265481403861262,0.0,False
+l1,15,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +15 ms delay",2.310910356294082,0.49839520165026824,0.0376,False
+l1,18,"nominal: no fault, +18 ms delay",0.25758951417423165,0.16571549256425439,0.0,False
+l1,18,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +18 ms delay",0.9212054129082536,0.22654348722233392,0.0,False
+l1,18,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +18 ms delay",1.6556628900055776,0.336748929842667,0.0,False
+l1,18,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +18 ms delay",2.589178564382497,0.6107384101192852,0.06,False
+l1,20,"nominal: no fault, +20 ms delay",3.2373314087304084,2.8596852102208716,1.0,False
+l1,20,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +20 ms delay",4.148107219711834,2.936668616261352,0.9936,False
+l1,20,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +20 ms delay",3.131315951728546,1.8346721615695354,0.564,False
+l1,20,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +20 ms delay",7.361134968146031,2.370021999778627,0.5992,False
+l1,22,"nominal: no fault, +22 ms delay",7.748802546054746,6.741122974114556,1.0,False
+l1,22,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +22 ms delay",7.006058957184988,6.9091040463536,1.0,False
+l1,22,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +22 ms delay",12.169653347958086,5.138702692369007,0.884,False
+l1,22,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +22 ms delay",6.866110672350825,3.6800589976054394,0.8384,False
+l1,25,"nominal: no fault, +25 ms delay",nan,nan,nan,True
+l1,25,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +25 ms delay",nan,nan,nan,True
+l1,25,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +25 ms delay",nan,nan,nan,True
+l1,25,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +25 ms delay",nan,nan,nan,True
+l1,30,"nominal: no fault, +30 ms delay",nan,nan,nan,True
+l1,30,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +30 ms delay",nan,nan,nan,True
+l1,30,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +30 ms delay",nan,nan,nan,True
+l1,30,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +30 ms delay",nan,nan,nan,True
+oracle,0,nominal: no fault,0.2187658592661674,0.1639356795339891,0.0,False
+oracle,0,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s",1.2477260757588924,0.3346508206427908,0.0,False
+oracle,0,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s",1.389318202346476,0.2832027084597592,0.0,False
+oracle,0,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s",2.57529087905652,0.5609999894623388,0.02,False
+oracle,5,"nominal: no fault, +5 ms delay",0.21838061276474124,0.16387769756522358,0.0,False
+oracle,5,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +5 ms delay",1.4673402604426191,0.38129887218516423,0.0,False
+oracle,5,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +5 ms delay",1.7109641003261091,0.33310231073607527,0.0,False
+oracle,5,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +5 ms delay",3.1524926620241844,0.680071428644497,0.0256,False
+oracle,10,"nominal: no fault, +10 ms delay",0.2180121338155056,0.16381892709376708,0.0,False
+oracle,10,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +10 ms delay",1.723304042393157,0.4358628880915104,0.0,False
+oracle,10,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +10 ms delay",2.086003664787737,0.3920582931546878,0.0,False
+oracle,10,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +10 ms delay",3.819258322798415,0.8207410231454297,0.0312,False
+oracle,15,"nominal: no fault, +15 ms delay",0.21766344169482704,0.16375810913562425,0.0,False
+oracle,15,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +15 ms delay",2.014608417574862,0.5015893069301305,0.0,False
+oracle,15,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +15 ms delay",2.512611157979212,0.46490570278612,0.0,False
+oracle,15,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +15 ms delay",4.564878798062319,0.9832924567234533,0.0368,False
+oracle,18,"nominal: no fault, +18 ms delay",0.21722347808030237,0.1637174786727396,0.0,False
+oracle,18,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +18 ms delay",2.2077799838067413,0.5494625362692033,0.0,False
+oracle,18,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +18 ms delay",2.7958211074277166,0.5211175365023198,0.0,False
+oracle,18,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +18 ms delay",5.0507768953891485,1.0921337695681161,0.0408,False
+oracle,20,"nominal: no fault, +20 ms delay",0.21663908563401035,0.16368883327314562,0.0,False
+oracle,20,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +20 ms delay",2.343742404606036,0.5854435288264764,0.0,False
+oracle,20,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +20 ms delay",2.9947995198997597,0.566853727615874,0.0,False
+oracle,20,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +20 ms delay",5.389462954950149,1.1699705116998564,0.0432,False
+oracle,22,"nominal: no fault, +22 ms delay",0.21646506331367274,0.16366870969975764,0.0,False
+oracle,22,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +22 ms delay",2.4856447218177493,0.6253113568784251,0.0,False
+oracle,22,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +22 ms delay",3.202132171695491,0.6231771572827856,0.0,False
+oracle,22,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +22 ms delay",5.739290219734398,1.252933380432766,0.0448,False
+oracle,25,"nominal: no fault, +25 ms delay",0.22002925197287648,0.1640822872424059,0.0,False
+oracle,25,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +25 ms delay",2.7088473924055547,0.6940092859189326,0.0,False
+oracle,25,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +25 ms delay",3.527337384015271,0.7427940178525244,0.0,False
+oracle,25,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +25 ms delay",6.286974891032877,1.3908058571678599,0.048,False
+oracle,30,"nominal: no fault, +30 ms delay",1.5876592856712262,0.6134554900080273,0.0,False
+oracle,30,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +30 ms delay",3.26187909562364,1.0132053877034026,0.0,False
+oracle,30,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +30 ms delay",4.298398862538776,1.3427480169034962,0.0,False
+oracle,30,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +30 ms delay",7.327309999953109,1.7652134319004165,0.0656,False
+l1_a10,0,nominal: no fault,0.2191223161900174,0.1639161155110309,0.0,False
+l1_a10,0,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s",0.5054947698474594,0.12878567777475644,0.0,False
+l1_a10,0,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s",0.5942536674035555,0.159304392747491,0.0,False
+l1_a10,0,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s",1.415209605303486,0.2716625951946863,0.0048,False
+l1_a10,5,"nominal: no fault, +5 ms delay",0.2190157775415021,0.16392598210966397,0.0,False
+l1_a10,5,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +5 ms delay",0.577159260983977,0.13738941139945,0.0,False
+l1_a10,5,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +5 ms delay",0.7064541008422422,0.17906567683007463,0.0,False
+l1_a10,5,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +5 ms delay",1.6498014341501162,0.31851897641560656,0.0144,False
+l1_a10,10,"nominal: no fault, +10 ms delay",0.21909208753317047,0.16393855275646774,0.0,False
+l1_a10,10,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +10 ms delay",0.6812842480149431,0.14992609022623615,0.0,False
+l1_a10,10,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +10 ms delay",0.8753002446567123,0.20749790007954894,0.0,False
+l1_a10,10,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +10 ms delay",1.9475140889220686,0.3833284341143039,0.0224,False
+l1_a10,15,"nominal: no fault, +15 ms delay",0.2199721736741199,0.1639672554790122,0.0,False
+l1_a10,15,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +15 ms delay",0.8307227245710322,0.17518263427442643,0.0,False
+l1_a10,15,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +15 ms delay",1.1900039946142194,0.25662457976529973,0.0,False
+l1_a10,15,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +15 ms delay",2.343029538539708,0.4832638029737431,0.0352,False
+l1_a10,18,"nominal: no fault, +18 ms delay",0.22670812219790365,0.1642425604336482,0.0,False
+l1_a10,18,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +18 ms delay",0.9391950496801128,0.21945470607624457,0.0,False
+l1_a10,18,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +18 ms delay",1.534231645085446,0.3173051634299153,0.0,False
+l1_a10,18,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +18 ms delay",2.6322886109352277,0.5795815713536044,0.0504,False
+l1_a10,20,"nominal: no fault, +20 ms delay",3.061203065976786,2.1484079258091304,0.6256,False
+l1_a10,20,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +20 ms delay",3.0800253583021373,2.256278358752699,0.8608,False
+l1_a10,20,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +20 ms delay",3.9157933140939036,1.6796769070341642,0.4632,False
+l1_a10,20,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +20 ms delay",4.610108244358106,1.7648984784378081,0.4888,False
+l1_a10,22,"nominal: no fault, +22 ms delay",5.554531074428724,5.16263573054005,1.0,False
+l1_a10,22,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +22 ms delay",5.749186760082533,5.065776569208081,1.0,False
+l1_a10,22,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +22 ms delay",8.853853457938941,3.4597900946634232,0.76,False
+l1_a10,22,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +22 ms delay",6.126511462057341,3.1929119803268606,0.7816,False
+l1_a10,25,"nominal: no fault, +25 ms delay",66.2691407328217,49.49175199703411,1.0,False
+l1_a10,25,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +25 ms delay",nan,nan,nan,True
+l1_a10,25,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +25 ms delay",nan,nan,nan,True
+l1_a10,25,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +25 ms delay",nan,nan,nan,True
+l1_a10,30,"nominal: no fault, +30 ms delay",89.01076495678018,51.916611566897885,1.0,False
+l1_a10,30,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +30 ms delay",nan,nan,nan,True
+l1_a10,30,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +30 ms delay",nan,nan,nan,True
+l1_a10,30,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +30 ms delay",nan,nan,nan,True
+l1_a100,0,nominal: no fault,0.21902893144604255,0.16373024520135232,0.0,False
+l1_a100,0,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s",0.572731905631179,0.14091738065297602,0.0,False
+l1_a100,0,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s",0.668135685972786,0.15244267834629588,0.0,False
+l1_a100,0,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s",1.713676216145322,0.32281934189301087,0.0048,False
+l1_a100,5,"nominal: no fault, +5 ms delay",0.21886134987289393,0.16372872089414295,0.0,False
+l1_a100,5,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +5 ms delay",0.6514140236535255,0.15115032407651927,0.0,False
+l1_a100,5,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +5 ms delay",0.8231689629491853,0.1725624339127233,0.0,False
+l1_a100,5,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +5 ms delay",1.9748394041356805,0.36585735832070926,0.0056,False
+l1_a100,10,"nominal: no fault, +10 ms delay",0.2187745707910175,0.16372988793401044,0.0,False
+l1_a100,10,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +10 ms delay",0.7582232354345609,0.16432954608161346,0.0,False
+l1_a100,10,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +10 ms delay",1.0136948563311312,0.1982058497609847,0.0,False
+l1_a100,10,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +10 ms delay",2.285398288713554,0.4179173991808087,0.0136,False
+l1_a100,15,"nominal: no fault, +15 ms delay",0.2190443096545444,0.1637395962656983,0.0,False
+l1_a100,15,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +15 ms delay",0.9091775123363233,0.18397384486362697,0.0,False
+l1_a100,15,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +15 ms delay",1.2575859588521552,0.2331656134059442,0.0,False
+l1_a100,15,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +15 ms delay",2.679124587007653,0.48734567999537165,0.0208,False
+l1_a100,18,"nominal: no fault, +18 ms delay",0.21955056849930388,0.16375829551602056,0.0,False
+l1_a100,18,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +18 ms delay",1.02221077325192,0.20557688952767827,0.0,False
+l1_a100,18,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +18 ms delay",1.4364469602383978,0.2635879519167653,0.0,False
+l1_a100,18,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +18 ms delay",2.9664723269594555,0.5408668390888899,0.0264,False
+l1_a100,20,"nominal: no fault, +20 ms delay",0.22018773117909063,0.16378106780864798,0.0,False
+l1_a100,20,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +20 ms delay",1.1053603589828676,0.2354667104015478,0.0,False
+l1_a100,20,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +20 ms delay",1.5683001541787631,0.29131051483957765,0.0,False
+l1_a100,20,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +20 ms delay",3.1812016626274278,0.5829712677314415,0.0296,False
+l1_a100,22,"nominal: no fault, +22 ms delay",0.5191069798438527,0.21502192979272317,0.0,False
+l1_a100,22,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +22 ms delay",1.0451949974711998,0.38909899422229627,0.0,False
+l1_a100,22,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +22 ms delay",1.838822736176658,0.34997668644742447,0.0,False
+l1_a100,22,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +22 ms delay",3.286327242914578,0.6134395652403879,0.032,False
+l1_a100,25,"nominal: no fault, +25 ms delay",4.670983567115552,3.5820130824633996,0.8624,False
+l1_a100,25,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +25 ms delay",4.993010726310267,3.8396734507398813,0.9992,False
+l1_a100,25,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +25 ms delay",4.431965118497026,2.461940378020977,0.6184,False
+l1_a100,25,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +25 ms delay",8.498485734561058,2.8475640996883893,0.6272,False
+l1_a100,30,"nominal: no fault, +30 ms delay",11.136144474011827,10.891783670198755,1.0,False
+l1_a100,30,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +30 ms delay",13.556590867767005,11.06830318040642,1.0,False
+l1_a100,30,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +30 ms delay",13.214036278295557,7.918217031728131,0.972,False
+l1_a100,30,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +30 ms delay",22.06526231162422,7.746645990436412,0.8928,False
+l1_a300,0,nominal: no fault,0.21891358763236954,0.16348867377378848,0.0,False
+l1_a300,0,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s",0.7230083811415142,0.1900006819388128,0.0,False
+l1_a300,0,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s",1.0322726064968453,0.22044223937781277,0.0,False
+l1_a300,0,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s",2.392799688627696,0.5117225057401635,0.0024,False
+l1_a300,5,"nominal: no fault, +5 ms delay",0.2186747576767245,0.16346862391666872,0.0,False
+l1_a300,5,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +5 ms delay",0.82226559532857,0.2084584417465444,0.0,False
+l1_a300,5,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +5 ms delay",1.2334637832707043,0.2537396386644489,0.0,False
+l1_a300,5,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +5 ms delay",2.7355588520191034,0.576544438206869,0.0032,False
+l1_a300,10,"nominal: no fault, +10 ms delay",0.21843057146510345,0.16345099619270703,0.0,False
+l1_a300,10,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +10 ms delay",0.9452738253466957,0.22937560573618998,0.0,False
+l1_a300,10,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +10 ms delay",1.4647241767212356,0.2907601701440184,0.0,False
+l1_a300,10,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +10 ms delay",3.117010310190627,0.6472251910230467,0.0064,False
+l1_a300,15,"nominal: no fault, +15 ms delay",0.21823943932802475,0.16343924002152885,0.0,False
+l1_a300,15,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +15 ms delay",1.1053535344614003,0.25371143608735475,0.0,False
+l1_a300,15,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +15 ms delay",1.7362271241329141,0.33206596759294027,0.0,False
+l1_a300,15,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +15 ms delay",3.5478233355010977,0.7252115988691249,0.0104,False
+l1_a300,18,"nominal: no fault, +18 ms delay",0.2180212099434937,0.16343752579827756,0.0,False
+l1_a300,18,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +18 ms delay",1.2238438864044239,0.2715925880147531,0.0,False
+l1_a300,18,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +18 ms delay",1.927413472528633,0.3604622884338116,0.0,False
+l1_a300,18,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +18 ms delay",3.844103053617955,0.7788251069590791,0.016,False
+l1_a300,20,"nominal: no fault, +20 ms delay",0.2177102186791372,0.16344034124745058,0.0,False
+l1_a300,20,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +20 ms delay",1.3123359953870284,0.28582633939251545,0.0,False
+l1_a300,20,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +20 ms delay",2.066916047728668,0.3812380407578632,0.0,False
+l1_a300,20,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +20 ms delay",4.058089683308161,0.8177044015605974,0.0192,False
+l1_a300,22,"nominal: no fault, +22 ms delay",0.21789015046265034,0.16344835860088272,0.0,False
+l1_a300,22,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +22 ms delay",1.407500882321753,0.3034039422268563,0.0,False
+l1_a300,22,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +22 ms delay",2.2175258501418598,0.40417171723194056,0.0,False
+l1_a300,22,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +22 ms delay",4.29363916344485,0.8615862112624202,0.0272,False
+l1_a300,25,"nominal: no fault, +25 ms delay",0.21905123071540658,0.16348701026393667,0.0,False
+l1_a300,25,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +25 ms delay",1.5618151599692809,0.34202938806267597,0.0,False
+l1_a300,25,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +25 ms delay",2.461411145375949,0.4442146534426296,0.0,False
+l1_a300,25,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +25 ms delay",4.676848627482742,0.9342368886719232,0.0304,False
+l1_a300,30,"nominal: no fault, +30 ms delay",1.3980419291135135,0.6093335454975217,0.0,False
+l1_a300,30,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +30 ms delay",1.1703849918806117,0.503885001934736,0.0,False
+l1_a300,30,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +30 ms delay",3.532315612660781,0.6505220381181834,0.0,False
+l1_a300,30,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +30 ms delay",4.827137964612073,1.0018162319857655,0.0304,False
+l1_wc320,0,nominal: no fault,0.21906303224674595,0.16391813765657948,0.0,False
+l1_wc320,0,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s",0.5354908172916055,0.13319614238885333,0.0,False
+l1_wc320,0,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s",0.6496190866939219,0.17013683671011548,0.0,False
+l1_wc320,0,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s",1.526316330999805,0.29711523932887784,0.0088,False
+l1_wc320,5,"nominal: no fault, +5 ms delay",0.21897019316681812,0.1639296074153343,0.0,False
+l1_wc320,5,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +5 ms delay",0.6190187355276433,0.14367536513420268,0.0,False
+l1_wc320,5,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +5 ms delay",0.7874675466657619,0.19435808562446594,0.0,False
+l1_wc320,5,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +5 ms delay",1.790485760387668,0.35414818669841774,0.0176,False
+l1_wc320,10,"nominal: no fault, +10 ms delay",0.21915863343116357,0.16394570637517275,0.0,False
+l1_wc320,10,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +10 ms delay",0.7394395162618376,0.15977758035375628,0.0,False
+l1_wc320,10,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +10 ms delay",1.0049018091662147,0.2306727451298439,0.0,False
+l1_wc320,10,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +10 ms delay",2.126349931124585,0.43452488770792486,0.024,False
+l1_wc320,15,"nominal: no fault, +15 ms delay",0.22045211460523434,0.16398632785744735,0.0,False
+l1_wc320,15,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +15 ms delay",0.9039633888573335,0.19727852104413757,0.0,False
+l1_wc320,15,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +15 ms delay",1.412153852697781,0.29900637489046333,0.0,False
+l1_wc320,15,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +15 ms delay",2.5589977762338596,0.5611036460465735,0.0376,False
+l1_wc320,18,"nominal: no fault, +18 ms delay",0.6863141004300259,0.2863267365871869,0.0,False
+l1_wc320,18,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +18 ms delay",1.316270375764997,0.41848302798699355,0.0,False
+l1_wc320,18,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +18 ms delay",1.6611462240636525,0.3531261149465632,0.0,False
+l1_wc320,18,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +18 ms delay",3.1556364597328805,0.7369669440514975,0.0688,False
+l1_wc320,20,"nominal: no fault, +20 ms delay",4.068771981538765,3.791587599215363,1.0,False
+l1_wc320,20,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +20 ms delay",5.475607146272935,3.715553171373512,0.996,False
+l1_wc320,20,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +20 ms delay",4.49597774381862,2.386285774305124,0.6312,False
+l1_wc320,20,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +20 ms delay",9.113261776990294,2.997997254881948,0.6784,False
+l1_wc320,22,"nominal: no fault, +22 ms delay",68.00153559861052,40.40353018636998,1.0,False
+l1_wc320,22,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +22 ms delay",33.07425825799282,47.08992037179414,1.0,False
+l1_wc320,22,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +22 ms delay",nan,nan,nan,True
+l1_wc320,22,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +22 ms delay",78.13689458770656,30.65062057892297,1.0,False
+l1_wc320,25,"nominal: no fault, +25 ms delay",nan,nan,nan,True
+l1_wc320,25,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +25 ms delay",69.01348141788996,48.07156379905376,1.0,False
+l1_wc320,25,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +25 ms delay",73.33327470300148,39.10609832151292,1.0,False
+l1_wc320,25,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +25 ms delay",nan,nan,nan,True
+l1_wc320,30,"nominal: no fault, +30 ms delay",nan,nan,nan,True
+l1_wc320,30,"gust: gust (0.0, 0.1, 0.0) Nm for 0.5s, t0 6.00s, +30 ms delay",62.624965847475764,54.45651220482272,1.0,False
+l1_wc320,30,"fault: rotor 1, eta 0.65, abrupt, t0 6.00s, +30 ms delay",nan,nan,nan,True
+l1_wc320,30,"fault: rotor 3, eta 0.50, abrupt, t0 6.00s, +30 ms delay",nan,nan,nan,True

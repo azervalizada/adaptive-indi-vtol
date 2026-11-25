@@ -1,0 +1,26 @@
+rls: coarse grid 48 candidates, 32 admissible
+   refine: +7 (total refine 7), best score 0.5983
+   refine: +7 (total refine 14), best score 0.5979
+   refine: +6 (total refine 20), best score 0.5979
+baseline on tuning set: mean upset 1.523 deg; limit for (b): 0.1718 deg
+rls: 68 candidates (20 refine), 48 pass the rule
+   {'lag': 10, 'threshold': 0.005, 'forget': 0.97, 'p0': 0.3} upset 0.5979  healthy_dev 0.076  rms 0.1636
+   {'lag': 10, 'threshold': 0.005, 'forget': 0.97, 'p0': 0.03} upset 0.5982  healthy_dev 0.075  rms 0.1636
+   {'lag': 10, 'threshold': 0.005, 'forget': 0.97, 'p0': 0.1} upset 0.5983  healthy_dev 0.078  rms 0.1636
+   {'lag': 10, 'threshold': 0.005, 'forget': 0.95, 'p0': 0.3} upset 0.6031  healthy_dev 0.148  rms 0.1636
+   {'lag': 7, 'threshold': 0.005, 'forget': 0.97, 'p0': 0.3} upset 0.6076  healthy_dev 0.061  rms 0.1636
+   {'lag': 15, 'threshold': 0.005, 'forget': 0.97, 'p0': 0.1} upset 0.6102  healthy_dev 0.077  rms 0.1636
+   {'lag': 10, 'threshold': 0.005, 'forget': 0.97, 'p0': 1.0} upset 0.6118  healthy_dev 0.064  rms 0.1636
+   {'lag': 7, 'threshold': 0.005, 'forget': 0.97, 'p0': 0.1} upset 0.6190  healthy_dev 0.068  rms 0.1636
+   {'lag': 15, 'threshold': 0.005, 'forget': 0.97, 'p0': 0.3} upset 0.6232  healthy_dev 0.074  rms 0.1636
+   {'lag': 10, 'threshold': 0.005, 'forget': 0.98, 'p0': 0.03} upset 0.6469  healthy_dev 0.071  rms 0.1636
+WINNER: {'lag': 10, 'threshold': 0.005, 'forget': 0.97, 'p0': 0.3}
+   lag = 10: interior, neighbours all evaluated
+   threshold = 0.005: interior, neighbours all evaluated
+   forget = 0.97: interior, neighbours all evaluated
+   p0 = 0.3: interior, neighbours all evaluated
+unconstrained best (rule (a) only, reported, not used): {'lag': 1, 'threshold': 0.0, 'forget': 0.98, 'p0': 0.01} score 0.3509 healthy_dev 0.900
+
+real	4m59.019s
+user	9m18.465s
+sys	0m0.221s
